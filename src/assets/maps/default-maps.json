@@ -1,91 +1,4286 @@
 [
   {
-    "id": "tutorial",
+    "id": "level0",
     "name": "Tutorial",
-    "length": 3000,
+    "length": 1500,
+    "extendedLength": 2000,
     "objects": [
-      { "type": "enemy", "objectType": "Normal", "variant": "Crawler", "lane": 1, "position": 800 },
-      { "type": "bonus", "objectType": "Soldier", "variant": "Standard", "lane": 0, "position": 600 }
+      {
+        "id": 1,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 583,
+        "embeddedBonus": null
+      },
+      {
+        "id": 2,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 594,
+        "embeddedBonus": null
+      },
+      {
+        "id": 3,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 678,
+        "embeddedBonus": null
+      },
+      {
+        "id": 4,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 693,
+        "embeddedBonus": null
+      },
+      {
+        "id": 5,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 706,
+        "embeddedBonus": null
+      },
+      {
+        "id": 6,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 597,
+        "embeddedBonus": null
+      },
+      {
+        "id": 7,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 686,
+        "embeddedBonus": null
+      },
+      {
+        "id": 8,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 790,
+        "embeddedBonus": null
+      },
+      {
+        "id": 9,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 797,
+        "embeddedBonus": null
+      },
+      {
+        "id": 10,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 742,
+        "embeddedBonus": null
+      },
+      {
+        "id": 11,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 726,
+        "embeddedBonus": null
+      },
+      {
+        "id": 12,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 598,
+        "embeddedBonus": null
+      },
+      {
+        "id": 13,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 522,
+        "embeddedBonus": null
+      },
+      {
+        "id": 14,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 569,
+        "embeddedBonus": null
+      },
+      {
+        "id": 15,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 637,
+        "embeddedBonus": null
+      },
+      {
+        "id": 16,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 666,
+        "embeddedBonus": null
+      },
+      {
+        "id": 17,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 754,
+        "embeddedBonus": null
+      },
+      {
+        "id": 18,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 770,
+        "embeddedBonus": null
+      },
+      {
+        "id": 19,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 800,
+        "embeddedBonus": null
+      },
+      {
+        "id": 20,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 806,
+        "embeddedBonus": null
+      },
+      {
+        "id": 21,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 890,
+        "embeddedBonus": null
+      },
+      {
+        "id": 22,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 860,
+        "embeddedBonus": null
+      },
+      {
+        "id": 23,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 833,
+        "embeddedBonus": null
+      },
+      {
+        "id": 24,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 889,
+        "embeddedBonus": null
+      },
+      {
+        "id": 25,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 874,
+        "embeddedBonus": null
+      },
+      {
+        "id": 26,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 846,
+        "embeddedBonus": null
+      },
+      {
+        "id": 27,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 799,
+        "embeddedBonus": null
+      },
+      {
+        "id": 28,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 901,
+        "embeddedBonus": null
+      },
+      {
+        "id": 29,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 899,
+        "embeddedBonus": null
+      },
+      {
+        "id": 30,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 972,
+        "embeddedBonus": null
+      },
+      {
+        "id": 31,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 967,
+        "embeddedBonus": null
+      },
+      {
+        "id": 32,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 932,
+        "embeddedBonus": null
+      },
+      {
+        "id": 33,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1034,
+        "embeddedBonus": null
+      },
+      {
+        "id": 34,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1010,
+        "embeddedBonus": null
+      },
+      {
+        "id": 35,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1055,
+        "embeddedBonus": null
+      },
+      {
+        "id": 36,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1069,
+        "embeddedBonus": null
+      },
+      {
+        "id": 37,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1076,
+        "embeddedBonus": null
+      },
+      {
+        "id": 38,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1113,
+        "embeddedBonus": null
+      },
+      {
+        "id": 39,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1131,
+        "embeddedBonus": null
+      },
+      {
+        "id": 40,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1069,
+        "embeddedBonus": null
+      },
+      {
+        "id": 41,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1129,
+        "embeddedBonus": null
+      },
+      {
+        "id": 42,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1194,
+        "embeddedBonus": null
+      },
+      {
+        "id": 43,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1167,
+        "embeddedBonus": null
+      },
+      {
+        "id": 44,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1135,
+        "embeddedBonus": null
+      },
+      {
+        "id": 45,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1173,
+        "embeddedBonus": null
+      },
+      {
+        "id": 46,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1228,
+        "embeddedBonus": null
+      },
+      {
+        "id": 47,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1236,
+        "embeddedBonus": null
+      },
+      {
+        "id": 48,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1278,
+        "embeddedBonus": null
+      },
+      {
+        "id": 49,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1312,
+        "embeddedBonus": null
+      },
+      {
+        "id": 50,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1362,
+        "embeddedBonus": null
+      },
+      {
+        "id": 51,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1295,
+        "embeddedBonus": null
+      },
+      {
+        "id": 52,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1345,
+        "embeddedBonus": null
+      },
+      {
+        "id": 53,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1377,
+        "embeddedBonus": null
+      },
+      {
+        "id": 54,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1331,
+        "embeddedBonus": null
+      },
+      {
+        "id": 55,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1305,
+        "embeddedBonus": null
+      },
+      {
+        "id": 56,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1360,
+        "embeddedBonus": null
+      },
+      {
+        "id": 57,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1401,
+        "embeddedBonus": null
+      },
+      {
+        "id": 58,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1461,
+        "embeddedBonus": null
+      },
+      {
+        "id": 59,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1395,
+        "embeddedBonus": null
+      },
+      {
+        "id": 60,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1479,
+        "embeddedBonus": null
+      },
+      {
+        "id": 61,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1436,
+        "embeddedBonus": null
+      },
+      {
+        "id": 62,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1469,
+        "embeddedBonus": null
+      },
+      {
+        "id": 63,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1549,
+        "embeddedBonus": null
+      },
+      {
+        "id": 64,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1519,
+        "embeddedBonus": null
+      },
+      {
+        "id": 65,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1544,
+        "embeddedBonus": null
+      },
+      {
+        "id": 66,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1556,
+        "embeddedBonus": null
+      },
+      {
+        "id": 67,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1588,
+        "embeddedBonus": null
+      },
+      {
+        "id": 68,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1596,
+        "embeddedBonus": null
+      },
+      {
+        "id": 69,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1492,
+        "embeddedBonus": null
+      },
+      {
+        "id": 70,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1472,
+        "embeddedBonus": null
+      },
+      {
+        "id": 71,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1530,
+        "embeddedBonus": null
+      },
+      {
+        "id": 72,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1546,
+        "embeddedBonus": null
+      },
+      {
+        "id": 73,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1231,
+        "embeddedBonus": null
+      },
+      {
+        "id": 74,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1273,
+        "embeddedBonus": null
+      },
+      {
+        "id": 75,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1336,
+        "embeddedBonus": null
+      },
+      {
+        "id": 76,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1399,
+        "embeddedBonus": null
+      },
+      {
+        "id": 77,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1440,
+        "embeddedBonus": null
+      },
+      {
+        "id": 78,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1063,
+        "embeddedBonus": null
+      },
+      {
+        "id": 79,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1126,
+        "embeddedBonus": null
+      },
+      {
+        "id": 80,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1186,
+        "embeddedBonus": null
+      },
+      {
+        "id": 81,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1212,
+        "embeddedBonus": null
+      },
+      {
+        "id": 82,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 938,
+        "embeddedBonus": null
+      },
+      {
+        "id": 83,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 982,
+        "embeddedBonus": null
+      },
+      {
+        "id": 84,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 963,
+        "embeddedBonus": null
+      },
+      {
+        "id": 85,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 972,
+        "embeddedBonus": null
+      },
+      {
+        "id": 86,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 869,
+        "embeddedBonus": null
+      },
+      {
+        "id": 87,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 893,
+        "embeddedBonus": null
+      },
+      {
+        "id": 88,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 829,
+        "embeddedBonus": null
+      },
+      {
+        "id": 89,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 776,
+        "embeddedBonus": null
+      },
+      {
+        "id": 90,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1022,
+        "embeddedBonus": null
+      },
+      {
+        "id": 91,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1045,
+        "embeddedBonus": null
+      },
+      {
+        "id": 92,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 976,
+        "embeddedBonus": null
+      },
+      {
+        "id": 93,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1143,
+        "embeddedBonus": null
+      },
+      {
+        "id": 94,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1207,
+        "embeddedBonus": null
+      },
+      {
+        "id": 95,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1195,
+        "embeddedBonus": null
+      },
+      {
+        "id": 96,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1148,
+        "embeddedBonus": null
+      },
+      {
+        "id": 97,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 943,
+        "embeddedBonus": null
+      },
+      {
+        "id": 98,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 966,
+        "embeddedBonus": null
+      },
+      {
+        "id": 99,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 682,
+        "embeddedBonus": null
+      },
+      {
+        "id": 100,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 752,
+        "embeddedBonus": null
+      },
+      {
+        "id": 101,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 446,
+        "embeddedBonus": null
+      },
+      {
+        "id": 102,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 408,
+        "embeddedBonus": null
+      },
+      {
+        "id": 103,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 358,
+        "embeddedBonus": null
+      },
+      {
+        "id": 104,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 288,
+        "embeddedBonus": null
+      },
+      {
+        "id": 105,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 366,
+        "embeddedBonus": null
+      },
+      {
+        "id": 106,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 522,
+        "embeddedBonus": null
+      },
+      {
+        "id": 107,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 498,
+        "embeddedBonus": null
+      },
+      {
+        "id": 108,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 170,
+        "embeddedBonus": null
+      },
+      {
+        "id": 109,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 289,
+        "embeddedBonus": null
+      },
+      {
+        "id": 110,
+        "type": "bonus",
+        "objectType": "gun",
+        "variant": "ak47",
+        "lane": 0,
+        "position": 400,
+        "embeddedBonus": null
+      },
+      {
+        "id": 111,
+        "type": "bonus",
+        "objectType": "gun",
+        "variant": "ak47",
+        "lane": 0,
+        "position": 522,
+        "embeddedBonus": null
+      },
+      {
+        "id": 112,
+        "type": "bonus",
+        "objectType": "grenade",
+        "variant": "standard",
+        "lane": 0,
+        "position": 627,
+        "embeddedBonus": null
+      },
+      {
+        "id": 113,
+        "type": "bonus",
+        "objectType": "grenade",
+        "variant": "standard",
+        "lane": 0,
+        "position": 704,
+        "embeddedBonus": null
+      },
+      {
+        "id": 114,
+        "type": "bonus",
+        "objectType": "grenade",
+        "variant": "standard",
+        "lane": 0,
+        "position": 782,
+        "embeddedBonus": null
+      }
     ],
     "spawnZones": []
   },
   {
     "id": "level1",
     "name": "Level 1: The Outbreak",
-    "length": 6000,
+    "length": 3000,
+    "extendedLength": 4000,
     "objects": [
-      { "type": "enemy", "objectType": "Normal", "variant": "Standard", "lane": 2, "position": 1000 },
-      { "type": "enemy", "objectType": "Normal", "variant": "Standard", "lane": 4, "position": 1500 },
-      { "type": "obstacle", "objectType": "Small", "variant": "Barricade", "lane": 3, "position": 1200 },
-      { "type": "bonus", "objectType": "Grenade", "variant": "Standard", "lane": 0, "position": 1800 }
-    ],
-    "spawnZones": [
       {
+        "id": 1,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 187,
+        "embeddedBonus": null
+      },
+      {
+        "id": 2,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 250,
+        "embeddedBonus": null
+      },
+      {
+        "id": 3,
+        "type": "bonus",
+        "objectType": "gun",
+        "variant": "ak47",
+        "lane": 0,
+        "position": 405,
+        "embeddedBonus": null
+      },
+      {
+        "id": 4,
+        "type": "bonus",
+        "objectType": "gun",
+        "variant": "ak47",
+        "lane": 0,
+        "position": 466,
+        "embeddedBonus": null
+      },
+      {
+        "id": 5,
         "type": "enemy",
-        "startPosition": 2000,
-        "endPosition": 5000,
-        "lanes": [1, 2, 3, 4],
-        "spawnFrequency": 5,
-        "spawnCount": 10,
-        "possibleEntities": [
-          { "objectType": "Normal", "variant": "Standard", "weight": 80 },
-          { "objectType": "Normal", "variant": "Crawler", "weight": 20 }
-        ]
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 490,
+        "embeddedBonus": null
+      },
+      {
+        "id": 6,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 444,
+        "embeddedBonus": null
+      },
+      {
+        "id": 7,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 514,
+        "embeddedBonus": null
+      },
+      {
+        "id": 8,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 534,
+        "embeddedBonus": null
+      },
+      {
+        "id": 9,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 659,
+        "embeddedBonus": null
+      },
+      {
+        "id": 10,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 2,
+        "position": 431,
+        "embeddedBonus": null
+      },
+      {
+        "id": 11,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 6,
+        "position": 496,
+        "embeddedBonus": null
+      },
+      {
+        "id": 12,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 8,
+        "position": 615,
+        "embeddedBonus": null
+      },
+      {
+        "id": 13,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 7,
+        "position": 614,
+        "embeddedBonus": null
+      },
+      {
+        "id": 14,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 8,
+        "position": 716,
+        "embeddedBonus": null
+      },
+      {
+        "id": 15,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 2,
+        "position": 617,
+        "embeddedBonus": null
+      },
+      {
+        "id": 16,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 2,
+        "position": 706,
+        "embeddedBonus": null
+      },
+      {
+        "id": 17,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 4,
+        "position": 721,
+        "embeddedBonus": null
+      },
+      {
+        "id": 18,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 4,
+        "position": 645,
+        "embeddedBonus": null
+      },
+      {
+        "id": 19,
+        "type": "enemy",
+        "objectType": "armored",
+        "variant": "standard",
+        "lane": 6,
+        "position": 774,
+        "embeddedBonus": null
+      },
+      {
+        "id": 20,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 750,
+        "embeddedBonus": null
+      },
+      {
+        "id": 21,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 776,
+        "embeddedBonus": null
+      },
+      {
+        "id": 22,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 769,
+        "embeddedBonus": null
+      },
+      {
+        "id": 23,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 763,
+        "embeddedBonus": null
+      },
+      {
+        "id": 24,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 889,
+        "embeddedBonus": null
+      },
+      {
+        "id": 25,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 991,
+        "embeddedBonus": null
+      },
+      {
+        "id": 26,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1075,
+        "embeddedBonus": null
+      },
+      {
+        "id": 27,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1123,
+        "embeddedBonus": null
+      },
+      {
+        "id": 28,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1226,
+        "embeddedBonus": null
+      },
+      {
+        "id": 29,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1222,
+        "embeddedBonus": null
+      },
+      {
+        "id": 30,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1382,
+        "embeddedBonus": null
+      },
+      {
+        "id": 31,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 774,
+        "embeddedBonus": null
+      },
+      {
+        "id": 32,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 870,
+        "embeddedBonus": null
+      },
+      {
+        "id": 33,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 888,
+        "embeddedBonus": null
+      },
+      {
+        "id": 34,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 795,
+        "embeddedBonus": null
+      },
+      {
+        "id": 35,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 690,
+        "embeddedBonus": null
+      },
+      {
+        "id": 36,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 922,
+        "embeddedBonus": null
+      },
+      {
+        "id": 37,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1024,
+        "embeddedBonus": null
+      },
+      {
+        "id": 38,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 994,
+        "embeddedBonus": null
+      },
+      {
+        "id": 39,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1112,
+        "embeddedBonus": null
+      },
+      {
+        "id": 40,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1172,
+        "embeddedBonus": null
+      },
+      {
+        "id": 41,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1084,
+        "embeddedBonus": null
+      },
+      {
+        "id": 42,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 933,
+        "embeddedBonus": null
+      },
+      {
+        "id": 43,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 881,
+        "embeddedBonus": null
+      },
+      {
+        "id": 44,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 919,
+        "embeddedBonus": null
+      },
+      {
+        "id": 45,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 975,
+        "embeddedBonus": null
+      },
+      {
+        "id": 46,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 988,
+        "embeddedBonus": null
+      },
+      {
+        "id": 47,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1016,
+        "embeddedBonus": null
+      },
+      {
+        "id": 48,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1168,
+        "embeddedBonus": null
+      },
+      {
+        "id": 49,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1202,
+        "embeddedBonus": null
+      },
+      {
+        "id": 50,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1292,
+        "embeddedBonus": null
+      },
+      {
+        "id": 51,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1059,
+        "embeddedBonus": null
+      },
+      {
+        "id": 52,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1007,
+        "embeddedBonus": null
+      },
+      {
+        "id": 53,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1173,
+        "embeddedBonus": null
+      },
+      {
+        "id": 54,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1201,
+        "embeddedBonus": null
+      },
+      {
+        "id": 55,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1090,
+        "embeddedBonus": null
+      },
+      {
+        "id": 56,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1031,
+        "embeddedBonus": null
+      },
+      {
+        "id": 57,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1070,
+        "embeddedBonus": null
+      },
+      {
+        "id": 58,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1011,
+        "embeddedBonus": null
+      },
+      {
+        "id": 59,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1119,
+        "embeddedBonus": null
+      },
+      {
+        "id": 60,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1166,
+        "embeddedBonus": null
+      },
+      {
+        "id": 61,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1140,
+        "embeddedBonus": null
+      },
+      {
+        "id": 62,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1234,
+        "embeddedBonus": null
+      },
+      {
+        "id": 63,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1181,
+        "embeddedBonus": null
+      },
+      {
+        "id": 64,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1188,
+        "embeddedBonus": null
+      },
+      {
+        "id": 65,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1290,
+        "embeddedBonus": null
+      },
+      {
+        "id": 66,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1268,
+        "embeddedBonus": null
+      },
+      {
+        "id": 67,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1249,
+        "embeddedBonus": null
+      },
+      {
+        "id": 68,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1298,
+        "embeddedBonus": null
+      },
+      {
+        "id": 69,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1298,
+        "embeddedBonus": null
+      },
+      {
+        "id": 70,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1268,
+        "embeddedBonus": null
+      },
+      {
+        "id": 71,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1332,
+        "embeddedBonus": null
+      },
+      {
+        "id": 72,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1266,
+        "embeddedBonus": null
+      },
+      {
+        "id": 73,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1341,
+        "embeddedBonus": null
+      },
+      {
+        "id": 74,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1365,
+        "embeddedBonus": null
+      },
+      {
+        "id": 75,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1274,
+        "embeddedBonus": null
+      },
+      {
+        "id": 76,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1388,
+        "embeddedBonus": null
+      },
+      {
+        "id": 77,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1343,
+        "embeddedBonus": null
+      },
+      {
+        "id": 78,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1465,
+        "embeddedBonus": null
+      },
+      {
+        "id": 79,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1503,
+        "embeddedBonus": null
+      },
+      {
+        "id": 80,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1428,
+        "embeddedBonus": null
+      },
+      {
+        "id": 81,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1401,
+        "embeddedBonus": null
+      },
+      {
+        "id": 82,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1501,
+        "embeddedBonus": null
+      },
+      {
+        "id": 83,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1493,
+        "embeddedBonus": null
+      },
+      {
+        "id": 84,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1424,
+        "embeddedBonus": null
+      },
+      {
+        "id": 85,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1549,
+        "embeddedBonus": null
+      },
+      {
+        "id": 86,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1532,
+        "embeddedBonus": null
+      },
+      {
+        "id": 87,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1425,
+        "embeddedBonus": null
+      },
+      {
+        "id": 88,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1362,
+        "embeddedBonus": null
+      },
+      {
+        "id": 89,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1365,
+        "embeddedBonus": null
+      },
+      {
+        "id": 90,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1465,
+        "embeddedBonus": null
+      },
+      {
+        "id": 91,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1440,
+        "embeddedBonus": null
+      },
+      {
+        "id": 92,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1534,
+        "embeddedBonus": null
+      },
+      {
+        "id": 93,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1520,
+        "embeddedBonus": null
+      },
+      {
+        "id": 94,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1526,
+        "embeddedBonus": null
+      },
+      {
+        "id": 95,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1610,
+        "embeddedBonus": null
+      },
+      {
+        "id": 96,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1633,
+        "embeddedBonus": null
+      },
+      {
+        "id": 97,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1670,
+        "embeddedBonus": null
+      },
+      {
+        "id": 98,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1678,
+        "embeddedBonus": null
+      },
+      {
+        "id": 99,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1582,
+        "embeddedBonus": null
+      },
+      {
+        "id": 100,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1674,
+        "embeddedBonus": null
+      },
+      {
+        "id": 101,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1576,
+        "embeddedBonus": null
+      },
+      {
+        "id": 102,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1493,
+        "embeddedBonus": null
+      },
+      {
+        "id": 103,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1654,
+        "embeddedBonus": null
+      },
+      {
+        "id": 104,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1706,
+        "embeddedBonus": null
+      },
+      {
+        "id": 105,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1714,
+        "embeddedBonus": null
+      },
+      {
+        "id": 106,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1761,
+        "embeddedBonus": null
+      },
+      {
+        "id": 107,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1770,
+        "embeddedBonus": null
+      },
+      {
+        "id": 108,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1686,
+        "embeddedBonus": null
+      },
+      {
+        "id": 109,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1690,
+        "embeddedBonus": null
+      },
+      {
+        "id": 110,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1541,
+        "embeddedBonus": null
+      },
+      {
+        "id": 111,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1614,
+        "embeddedBonus": null
+      },
+      {
+        "id": 112,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1399,
+        "embeddedBonus": null
+      },
+      {
+        "id": 113,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1340,
+        "embeddedBonus": null
+      },
+      {
+        "id": 114,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1329,
+        "embeddedBonus": null
+      },
+      {
+        "id": 115,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1316,
+        "embeddedBonus": null
+      },
+      {
+        "id": 116,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1191,
+        "embeddedBonus": null
+      },
+      {
+        "id": 117,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1236,
+        "embeddedBonus": null
+      },
+      {
+        "id": 118,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1440,
+        "embeddedBonus": null
+      },
+      {
+        "id": 119,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1498,
+        "embeddedBonus": null
+      },
+      {
+        "id": 120,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1456,
+        "embeddedBonus": null
+      },
+      {
+        "id": 121,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1473,
+        "embeddedBonus": null
+      },
+      {
+        "id": 122,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1605,
+        "embeddedBonus": null
+      },
+      {
+        "id": 123,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1600,
+        "embeddedBonus": null
+      },
+      {
+        "id": 124,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1706,
+        "embeddedBonus": null
+      },
+      {
+        "id": 125,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1779,
+        "embeddedBonus": null
+      },
+      {
+        "id": 126,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1776,
+        "embeddedBonus": null
+      },
+      {
+        "id": 127,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1744,
+        "embeddedBonus": null
+      },
+      {
+        "id": 128,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1878,
+        "embeddedBonus": null
+      },
+      {
+        "id": 129,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1878,
+        "embeddedBonus": null
+      },
+      {
+        "id": 130,
+        "type": "obstacle",
+        "objectType": "small",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1944,
+        "embeddedBonus": null
+      },
+      {
+        "id": 132,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1744,
+        "embeddedBonus": null
+      },
+      {
+        "id": 133,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1758,
+        "embeddedBonus": null
+      },
+      {
+        "id": 134,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1768,
+        "embeddedBonus": null
+      },
+      {
+        "id": 135,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1870,
+        "embeddedBonus": null
+      },
+      {
+        "id": 138,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1864,
+        "embeddedBonus": null
+      },
+      {
+        "id": 139,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1962,
+        "embeddedBonus": null
+      },
+      {
+        "id": 142,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1998,
+        "embeddedBonus": null
+      },
+      {
+        "id": 143,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2048,
+        "embeddedBonus": null
+      },
+      {
+        "id": 145,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2114,
+        "embeddedBonus": null
+      },
+      {
+        "id": 147,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2224,
+        "embeddedBonus": null
+      },
+      {
+        "id": 150,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2328,
+        "embeddedBonus": null
+      },
+      {
+        "id": 153,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2397,
+        "embeddedBonus": null
+      },
+      {
+        "id": 154,
+        "type": "obstacle",
+        "objectType": "hazard",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2434,
+        "embeddedBonus": null
+      },
+      {
+        "id": 156,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2087,
+        "embeddedBonus": null
+      },
+      {
+        "id": 157,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2005,
+        "embeddedBonus": null
+      },
+      {
+        "id": 158,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1962,
+        "embeddedBonus": null
+      },
+      {
+        "id": 159,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1928,
+        "embeddedBonus": null
+      },
+      {
+        "id": 160,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1933,
+        "embeddedBonus": null
+      },
+      {
+        "id": 161,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2070,
+        "embeddedBonus": null
+      },
+      {
+        "id": 162,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2226,
+        "embeddedBonus": null
+      },
+      {
+        "id": 163,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2192,
+        "embeddedBonus": null
+      },
+      {
+        "id": 164,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2178,
+        "embeddedBonus": null
+      },
+      {
+        "id": 165,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2288,
+        "embeddedBonus": null
+      },
+      {
+        "id": 166,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2039,
+        "embeddedBonus": null
+      },
+      {
+        "id": 167,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2026,
+        "embeddedBonus": null
+      },
+      {
+        "id": 168,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2022,
+        "embeddedBonus": null
+      },
+      {
+        "id": 169,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2109,
+        "embeddedBonus": null
+      },
+      {
+        "id": 170,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2200,
+        "embeddedBonus": null
+      },
+      {
+        "id": 171,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2262,
+        "embeddedBonus": null
+      },
+      {
+        "id": 172,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2276,
+        "embeddedBonus": null
+      },
+      {
+        "id": 173,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2197,
+        "embeddedBonus": null
+      },
+      {
+        "id": 174,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2338,
+        "embeddedBonus": null
+      },
+      {
+        "id": 175,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2408,
+        "embeddedBonus": null
+      },
+      {
+        "id": 176,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2342,
+        "embeddedBonus": null
+      },
+      {
+        "id": 177,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2391,
+        "embeddedBonus": null
+      },
+      {
+        "id": 178,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2345,
+        "embeddedBonus": null
+      },
+      {
+        "id": 179,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2276,
+        "embeddedBonus": null
+      },
+      {
+        "id": 180,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2448,
+        "embeddedBonus": null
+      },
+      {
+        "id": 181,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1953,
+        "embeddedBonus": null
+      },
+      {
+        "id": 182,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1874,
+        "embeddedBonus": null
+      },
+      {
+        "id": 183,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2010,
+        "embeddedBonus": null
+      },
+      {
+        "id": 184,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2014,
+        "embeddedBonus": null
+      },
+      {
+        "id": 185,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2098,
+        "embeddedBonus": null
+      },
+      {
+        "id": 186,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2060,
+        "embeddedBonus": null
+      },
+      {
+        "id": 187,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2110,
+        "embeddedBonus": null
+      },
+      {
+        "id": 188,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2148,
+        "embeddedBonus": null
+      },
+      {
+        "id": 189,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2170,
+        "embeddedBonus": null
+      },
+      {
+        "id": 190,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2241,
+        "embeddedBonus": null
+      },
+      {
+        "id": 191,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2321,
+        "embeddedBonus": null
+      },
+      {
+        "id": 192,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2266,
+        "embeddedBonus": null
+      },
+      {
+        "id": 193,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2349,
+        "embeddedBonus": null
+      },
+      {
+        "id": 194,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2266,
+        "embeddedBonus": null
+      },
+      {
+        "id": 195,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2352,
+        "embeddedBonus": null
+      },
+      {
+        "id": 196,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2385,
+        "embeddedBonus": null
+      },
+      {
+        "id": 197,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2348,
+        "embeddedBonus": null
+      },
+      {
+        "id": 198,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2448,
+        "embeddedBonus": null
+      },
+      {
+        "id": 199,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2533,
+        "embeddedBonus": null
+      },
+      {
+        "id": 200,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2542,
+        "embeddedBonus": null
+      },
+      {
+        "id": 201,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2489,
+        "embeddedBonus": null
+      },
+      {
+        "id": 202,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2528,
+        "embeddedBonus": null
+      },
+      {
+        "id": 203,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2442,
+        "embeddedBonus": null
+      },
+      {
+        "id": 204,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2483,
+        "embeddedBonus": null
+      },
+      {
+        "id": 205,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2631,
+        "embeddedBonus": null
+      },
+      {
+        "id": 206,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2574,
+        "embeddedBonus": null
+      },
+      {
+        "id": 207,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2488,
+        "embeddedBonus": null
+      },
+      {
+        "id": 208,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2588,
+        "embeddedBonus": null
+      },
+      {
+        "id": 209,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2704,
+        "embeddedBonus": null
+      },
+      {
+        "id": 210,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2741,
+        "embeddedBonus": null
+      },
+      {
+        "id": 211,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2609,
+        "embeddedBonus": null
+      },
+      {
+        "id": 212,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2676,
+        "embeddedBonus": null
+      },
+      {
+        "id": 213,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2744,
+        "embeddedBonus": null
+      },
+      {
+        "id": 214,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2690,
+        "embeddedBonus": null
+      },
+      {
+        "id": 215,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2616,
+        "embeddedBonus": null
+      },
+      {
+        "id": 216,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2653,
+        "embeddedBonus": null
+      },
+      {
+        "id": 217,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2746,
+        "embeddedBonus": null
+      },
+      {
+        "id": 218,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2853,
+        "embeddedBonus": null
+      },
+      {
+        "id": 219,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2834,
+        "embeddedBonus": null
+      },
+      {
+        "id": 220,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2858,
+        "embeddedBonus": null
+      },
+      {
+        "id": 221,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2816,
+        "embeddedBonus": null
+      },
+      {
+        "id": 222,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2826,
+        "embeddedBonus": null
+      },
+      {
+        "id": 223,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2892,
+        "embeddedBonus": null
+      },
+      {
+        "id": 224,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 2953,
+        "embeddedBonus": null
+      },
+      {
+        "id": 225,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2726,
+        "embeddedBonus": null
+      },
+      {
+        "id": 226,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2626,
+        "embeddedBonus": null
+      },
+      {
+        "id": 227,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2579,
+        "embeddedBonus": null
+      },
+      {
+        "id": 228,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2668,
+        "embeddedBonus": null
+      },
+      {
+        "id": 229,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2733,
+        "embeddedBonus": null
+      },
+      {
+        "id": 230,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2812,
+        "embeddedBonus": null
+      },
+      {
+        "id": 231,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2870,
+        "embeddedBonus": null
+      },
+      {
+        "id": 232,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2794,
+        "embeddedBonus": null
+      },
+      {
+        "id": 233,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 2916,
+        "embeddedBonus": null
+      },
+      {
+        "id": 234,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2929,
+        "embeddedBonus": null
+      },
+      {
+        "id": 235,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2903,
+        "embeddedBonus": null
+      },
+      {
+        "id": 236,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 2957,
+        "embeddedBonus": null
+      },
+      {
+        "id": 237,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 3003,
+        "embeddedBonus": null
+      },
+      {
+        "id": 238,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 3023,
+        "embeddedBonus": null
+      },
+      {
+        "id": 239,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2956,
+        "embeddedBonus": null
+      },
+      {
+        "id": 240,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2975,
+        "embeddedBonus": null
+      },
+      {
+        "id": 241,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 2927,
+        "embeddedBonus": null
+      },
+      {
+        "id": 242,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 3034,
+        "embeddedBonus": null
+      },
+      {
+        "id": 243,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 3048,
+        "embeddedBonus": null
+      },
+      {
+        "id": 244,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2996,
+        "embeddedBonus": null
+      },
+      {
+        "id": 245,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 2940,
+        "embeddedBonus": null
+      },
+      {
+        "id": 246,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 3032,
+        "embeddedBonus": null
+      },
+      {
+        "id": 247,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 3092,
+        "embeddedBonus": null
+      },
+      {
+        "id": 248,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 3063,
+        "embeddedBonus": null
+      },
+      {
+        "id": 249,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2957,
+        "embeddedBonus": null
+      },
+      {
+        "id": 250,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 2904,
+        "embeddedBonus": null
+      },
+      {
+        "id": 251,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 3124,
+        "embeddedBonus": null
+      },
+      {
+        "id": 252,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 3007,
+        "embeddedBonus": null
+      },
+      {
+        "id": 253,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 3009,
+        "embeddedBonus": null
+      },
+      {
+        "id": 254,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 3132,
+        "embeddedBonus": null
+      },
+      {
+        "id": 255,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 3107,
+        "embeddedBonus": null
+      },
+      {
+        "id": 256,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 3102,
+        "embeddedBonus": null
+      },
+      {
+        "id": 257,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 3187,
+        "embeddedBonus": null
+      },
+      {
+        "id": 258,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 3120,
+        "embeddedBonus": null
+      },
+      {
+        "id": 259,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 3270,
+        "embeddedBonus": null
+      },
+      {
+        "id": 260,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 3200,
+        "embeddedBonus": null
+      },
+      {
+        "id": 261,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 3161,
+        "embeddedBonus": null
+      },
+      {
+        "id": 262,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 3178,
+        "embeddedBonus": null
+      },
+      {
+        "id": 263,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 3219,
+        "embeddedBonus": null
+      },
+      {
+        "id": 264,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 3208,
+        "embeddedBonus": null
+      },
+      {
+        "id": 265,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 3071,
+        "embeddedBonus": null
+      },
+      {
+        "id": 266,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 3046,
+        "embeddedBonus": null
+      },
+      {
+        "id": 267,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 3098,
+        "embeddedBonus": null
+      },
+      {
+        "id": 268,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 3166,
+        "embeddedBonus": null
+      },
+      {
+        "id": 269,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 3193,
+        "embeddedBonus": null
+      },
+      {
+        "id": 270,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 2554,
+        "embeddedBonus": null
+      },
+      {
+        "id": 271,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 2558,
+        "embeddedBonus": null
+      },
+      {
+        "id": 272,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 2477,
+        "embeddedBonus": null
+      },
+      {
+        "id": 273,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 2597,
+        "embeddedBonus": null
+      },
+      {
+        "id": 274,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 2746,
+        "embeddedBonus": null
+      },
+      {
+        "id": 275,
+        "type": "bonus",
+        "objectType": "grenade",
+        "variant": "standard",
+        "lane": 0,
+        "position": 2353,
+        "embeddedBonus": null
+      },
+      {
+        "id": 276,
+        "type": "bonus",
+        "objectType": "grenade",
+        "variant": "standard",
+        "lane": 0,
+        "position": 2244,
+        "embeddedBonus": null
       }
-    ]
+    ],
+    "spawnZones": []
   },
   {
     "id": "level2",
     "name": "Level 2: The Horde",
-    "length": 8000,
+    "length": 1000,
+    "extendedLength": 1500,
     "objects": [
-      { "type": "enemy", "objectType": "Armored", "variant": "Standard", "lane": 3, "position": 1200 },
-      { "type": "enemy", "objectType": "Normal", "variant": "Standard", "lane": 5, "position": 1500 },
-      { "type": "obstacle", "objectType": "Medium", "variant": "Barricade", "lane": 4, "position": 1800 },
-      { "type": "bonus", "objectType": "Soldier", "variant": "Standard", "lane": 0, "position": 2000 }
-    ],
-    "spawnZones": [
       {
+        "id": 277,
         "type": "enemy",
-        "startPosition": 3000,
-        "endPosition": 7000,
-        "lanes": [2, 3, 4, 5, 6],
-        "spawnFrequency": 4,
-        "spawnCount": 15,
-        "possibleEntities": [
-          { "objectType": "Normal", "variant": "Standard", "weight": 60 },
-          { "objectType": "Normal", "variant": "Crawler", "weight": 20 },
-          { "objectType": "Armored", "variant": "Standard", "weight": 20 }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "level3",
-    "name": "Level 3: The Siege",
-    "length": 10000,
-    "objects": [
-      { "type": "enemy", "objectType": "Giant", "variant": "Standard", "lane": 4, "position": 1500 },
-      { "type": "enemy", "objectType": "Armored", "variant": "Standard", "lane": 2, "position": 1200 },
-      { "type": "enemy", "objectType": "Armored", "variant": "Standard", "lane": 6, "position": 1200 },
-      { "type": "obstacle", "objectType": "Large", "variant": "Barricade", "lane": 3, "position": 2000 },
-      { "type": "bonus", "objectType": "Grenade", "variant": "Sticky", "lane": 0, "position": 2500 }
-    ],
-    "spawnZones": [
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 445,
+        "embeddedBonus": null
+      },
       {
+        "id": 278,
         "type": "enemy",
-        "startPosition": 3500,
-        "endPosition": 9000,
-        "lanes": [1, 2, 3, 4, 5, 6, 7],
-        "spawnFrequency": 3,
-        "spawnCount": 25,
-        "possibleEntities": [
-          { "objectType": "Normal", "variant": "Standard", "weight": 50 },
-          { "objectType": "Normal", "variant": "Crawler", "weight": 15 },
-          { "objectType": "Armored", "variant": "Standard", "weight": 25 },
-          { "objectType": "Giant", "variant": "Standard", "weight": 10 }
-        ]
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 458,
+        "embeddedBonus": null
+      },
+      {
+        "id": 279,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 538,
+        "embeddedBonus": null
+      },
+      {
+        "id": 280,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 379,
+        "embeddedBonus": null
+      },
+      {
+        "id": 281,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 564,
+        "embeddedBonus": null
+      },
+      {
+        "id": 282,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 448,
+        "embeddedBonus": null
+      },
+      {
+        "id": 283,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 3,
+        "position": 680,
+        "embeddedBonus": null
+      },
+      {
+        "id": 284,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 5,
+        "position": 694,
+        "embeddedBonus": null
+      },
+      {
+        "id": 285,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 7,
+        "position": 730,
+        "embeddedBonus": null
+      },
+      {
+        "id": 286,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 8,
+        "position": 728,
+        "embeddedBonus": null
+      },
+      {
+        "id": 287,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 6,
+        "position": 663,
+        "embeddedBonus": null
+      },
+      {
+        "id": 288,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 4,
+        "position": 622,
+        "embeddedBonus": null
+      },
+      {
+        "id": 289,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 2,
+        "position": 602,
+        "embeddedBonus": null
+      },
+      {
+        "id": 290,
+        "type": "enemy",
+        "objectType": "normal",
+        "variant": "standard",
+        "lane": 1,
+        "position": 680,
+        "embeddedBonus": null
+      },
+      {
+        "id": 291,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 797,
+        "embeddedBonus": null
+      },
+      {
+        "id": 292,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 728,
+        "embeddedBonus": null
+      },
+      {
+        "id": 293,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 768,
+        "embeddedBonus": null
+      },
+      {
+        "id": 294,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 809,
+        "embeddedBonus": null
+      },
+      {
+        "id": 295,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 814,
+        "embeddedBonus": null
+      },
+      {
+        "id": 296,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 849,
+        "embeddedBonus": null
+      },
+      {
+        "id": 297,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 791,
+        "embeddedBonus": null
+      },
+      {
+        "id": 298,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 761,
+        "embeddedBonus": null
+      },
+      {
+        "id": 299,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 748,
+        "embeddedBonus": null
+      },
+      {
+        "id": 300,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 704,
+        "embeddedBonus": null
+      },
+      {
+        "id": 301,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 784,
+        "embeddedBonus": null
+      },
+      {
+        "id": 302,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 860,
+        "embeddedBonus": null
+      },
+      {
+        "id": 303,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 874,
+        "embeddedBonus": null
+      },
+      {
+        "id": 304,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 849,
+        "embeddedBonus": null
+      },
+      {
+        "id": 305,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 872,
+        "embeddedBonus": null
+      },
+      {
+        "id": 306,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 920,
+        "embeddedBonus": null
+      },
+      {
+        "id": 307,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 894,
+        "embeddedBonus": null
+      },
+      {
+        "id": 308,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 816,
+        "embeddedBonus": null
+      },
+      {
+        "id": 309,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 978,
+        "embeddedBonus": null
+      },
+      {
+        "id": 310,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 977,
+        "embeddedBonus": null
+      },
+      {
+        "id": 311,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 927,
+        "embeddedBonus": null
+      },
+      {
+        "id": 312,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 916,
+        "embeddedBonus": null
+      },
+      {
+        "id": 313,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 943,
+        "embeddedBonus": null
+      },
+      {
+        "id": 314,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 926,
+        "embeddedBonus": null
+      },
+      {
+        "id": 315,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 922,
+        "embeddedBonus": null
+      },
+      {
+        "id": 316,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1012,
+        "embeddedBonus": null
+      },
+      {
+        "id": 317,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1004,
+        "embeddedBonus": null
+      },
+      {
+        "id": 318,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 969,
+        "embeddedBonus": null
+      },
+      {
+        "id": 319,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 924,
+        "embeddedBonus": null
+      },
+      {
+        "id": 320,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 824,
+        "embeddedBonus": null
+      },
+      {
+        "id": 321,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 856,
+        "embeddedBonus": null
+      },
+      {
+        "id": 322,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 988,
+        "embeddedBonus": null
+      },
+      {
+        "id": 323,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1022,
+        "embeddedBonus": null
+      },
+      {
+        "id": 324,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1076,
+        "embeddedBonus": null
+      },
+      {
+        "id": 325,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1063,
+        "embeddedBonus": null
+      },
+      {
+        "id": 326,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1124,
+        "embeddedBonus": null
+      },
+      {
+        "id": 327,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1110,
+        "embeddedBonus": null
+      },
+      {
+        "id": 328,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1058,
+        "embeddedBonus": null
+      },
+      {
+        "id": 329,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1121,
+        "embeddedBonus": null
+      },
+      {
+        "id": 330,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1119,
+        "embeddedBonus": null
+      },
+      {
+        "id": 331,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1015,
+        "embeddedBonus": null
+      },
+      {
+        "id": 332,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1048,
+        "embeddedBonus": null
+      },
+      {
+        "id": 333,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1176,
+        "embeddedBonus": null
+      },
+      {
+        "id": 334,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1060,
+        "embeddedBonus": null
+      },
+      {
+        "id": 335,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1088,
+        "embeddedBonus": null
+      },
+      {
+        "id": 336,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1223,
+        "embeddedBonus": null
+      },
+      {
+        "id": 337,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1176,
+        "embeddedBonus": null
+      },
+      {
+        "id": 338,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1185,
+        "embeddedBonus": null
+      },
+      {
+        "id": 339,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1278,
+        "embeddedBonus": null
+      },
+      {
+        "id": 340,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1192,
+        "embeddedBonus": null
+      },
+      {
+        "id": 341,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1172,
+        "embeddedBonus": null
+      },
+      {
+        "id": 342,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1208,
+        "embeddedBonus": null
+      },
+      {
+        "id": 343,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1184,
+        "embeddedBonus": null
+      },
+      {
+        "id": 344,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1140,
+        "embeddedBonus": null
+      },
+      {
+        "id": 345,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1204,
+        "embeddedBonus": null
+      },
+      {
+        "id": 346,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1276,
+        "embeddedBonus": null
+      },
+      {
+        "id": 347,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1275,
+        "embeddedBonus": null
+      },
+      {
+        "id": 348,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1284,
+        "embeddedBonus": null
+      },
+      {
+        "id": 349,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1344,
+        "embeddedBonus": null
+      },
+      {
+        "id": 350,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1350,
+        "embeddedBonus": null
+      },
+      {
+        "id": 351,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1383,
+        "embeddedBonus": null
+      },
+      {
+        "id": 352,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1328,
+        "embeddedBonus": null
+      },
+      {
+        "id": 353,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 7,
+        "position": 1248,
+        "embeddedBonus": null
+      },
+      {
+        "id": 354,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1276,
+        "embeddedBonus": null
+      },
+      {
+        "id": 355,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1243,
+        "embeddedBonus": null
+      },
+      {
+        "id": 356,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1289,
+        "embeddedBonus": null
+      },
+      {
+        "id": 357,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1344,
+        "embeddedBonus": null
+      },
+      {
+        "id": 358,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 5,
+        "position": 1308,
+        "embeddedBonus": null
+      },
+      {
+        "id": 359,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1279,
+        "embeddedBonus": null
+      },
+      {
+        "id": 360,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1368,
+        "embeddedBonus": null
+      },
+      {
+        "id": 361,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 6,
+        "position": 1394,
+        "embeddedBonus": null
+      },
+      {
+        "id": 362,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1276,
+        "embeddedBonus": null
+      },
+      {
+        "id": 363,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 8,
+        "position": 1253,
+        "embeddedBonus": null
+      },
+      {
+        "id": 364,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1396,
+        "embeddedBonus": null
+      },
+      {
+        "id": 365,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 3,
+        "position": 1345,
+        "embeddedBonus": null
+      },
+      {
+        "id": 366,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 4,
+        "position": 1371,
+        "embeddedBonus": null
+      },
+      {
+        "id": 367,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1384,
+        "embeddedBonus": null
+      },
+      {
+        "id": 368,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 1,
+        "position": 1313,
+        "embeddedBonus": null
+      },
+      {
+        "id": 369,
+        "type": "enemy",
+        "objectType": "giant",
+        "variant": "standard",
+        "lane": 2,
+        "position": 1254,
+        "embeddedBonus": null
+      },
+      {
+        "id": 370,
+        "type": "bonus",
+        "objectType": "soldier",
+        "variant": "standard",
+        "lane": 0,
+        "position": 451,
+        "embeddedBonus": null
+      },
+      {
+        "id": 371,
+        "type": "bonus",
+        "objectType": "gun",
+        "variant": "ak47",
+        "lane": 0,
+        "position": 684,
+        "embeddedBonus": null
       }
-    ]
+    ],
+    "spawnZones": []
   }
 ]

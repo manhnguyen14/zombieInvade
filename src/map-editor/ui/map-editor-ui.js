@@ -632,7 +632,10 @@ export class MapEditorUI {
                     break;
                 case 'gun':
                     options = [
-                        { value: 'ak47', text: 'AK-47' }
+                        { value: 'desert_eagle', text: 'Desert Eagle' },
+                        { value: 'benelli_m4', text: 'Benelli M4' },
+                        { value: 'ak47', text: 'AK-47' },
+                        { value: 'barrett_xm109', text: 'Barrett XM109' }
                     ];
                     break;
                 case 'grenade':

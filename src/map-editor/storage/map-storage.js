@@ -113,4 +113,23 @@ export class MapStorage {
             });
         });
     }
+
+    // Save a map to a file
+    saveMapToFile(map) {
+        if (!map) return;
+        
+        // Create a Blob with the map data
+        const mapJson = JSON.stringify(map, null, 2);
+        const blob = new Blob([mapJson], { type: 'application/json' });
+        
+        // Create a download link
+        const downloadLink = document.createElement('a');
+        downloadLink.href = URL.createObjectURL(blob);
+        downloadLink.download = `${map.name || 'map'}.json`;
+        
+        // Trigger the download
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    }
 }
