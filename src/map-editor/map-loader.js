@@ -168,32 +168,4 @@ export class MapLoader {
         this.ctx.fillText(`${entity.objectType}`, x - 15, y - 5);
         this.ctx.fillText(`${entity.variant}`, x - 15, y + 5);
     }
-    
-    /**
-     * Handle click events
-     */
-    handleClick(x, y) {
-        if (!this.map) {
-            // If no map is loaded and the load button is clicked
-            if (x > this.canvas.width / 2 - 75 && x < this.canvas.width / 2 + 75 &&
-                y > this.canvas.height / 2 - 20 && y < this.canvas.height / 2 + 20) {
-                this.loadMapFromFile();
-            }
-            return;
-        }
-        
-        // Check if scroll left button is clicked
-        if (x > 10 && x < 90 && y > this.canvas.height - 50 && y < this.canvas.height - 10) {
-            this.viewportOffset = Math.max(0, this.viewportOffset - this.scrollSpeed * 10);
-            this.render();
-            return;
-        }
-        
-        // Check if scroll right button is clicked
-        if (x > 100 && x < 180 && y > this.canvas.height - 50 && y < this.canvas.height - 10) {
-            this.viewportOffset = Math.min(this.map.length, this.viewportOffset + this.scrollSpeed * 10);
-            this.render();
-            return;
-        }
-    }
 }

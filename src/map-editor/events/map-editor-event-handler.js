@@ -37,10 +37,69 @@ export class MapEditorEventHandler {
         const x = event.clientX - rect.left;
         const y = event.clientY - rect.top;
         
+        // Handle different modes
         if (this.editor.mode === 'list') {
+            // Handle map list click
             this.handleMapListClick(x, y);
         } else if (this.editor.mode === 'edit') {
-            this.handleMapEditorClick(x, y);
+            if (!this.editor.currentMap) return;
+            
+            // Check if clicked on an entity
+            const clickedEntity = this.findEntityAtPosition(x, y);
+            
+            if (clickedEntity) {
+                // Select the entity
+                this.editor.selectedEntity = clickedEntity;
+                this.editor.ui.updateDeleteButtonVisibility();
+                this.editor.ui.updateEntityList();
+                this.editor.render();
+            } else {
+                // Place a new entity at the clicked position
+                const lane = Math.floor(y / this.editor.laneHeight);
+                const position = Math.round(x + this.editor.viewportOffset);
+                
+                // Validate lane based on entity type
+                if (this.editor.ui.selectedEntityType === 'bonus' && lane !== 0) {
+                    alert('Bonuses can only be placed in the bonus lane (lane 0)');
+                    return;
+                } else if (this.editor.ui.selectedEntityType !== 'bonus' && lane === 0) {
+                    alert('Only bonuses can be placed in the bonus lane (lane 0)');
+                    return;
+                }
+                
+                // Check if position is within extended map bounds
+                if (position < 0 || position > this.editor.currentMap.extendedLength) {
+                    alert(`Position must be between 0 and ${this.editor.currentMap.extendedLength}`);
+                    return;
+                }
+                
+                console.log(`Adding entity with variant: ${this.editor.ui.selectedVariant}`);
+                
+                // Check if embedded bonus is enabled
+                let embeddedBonus = null;
+                const embedBonusCheckbox = document.getElementById('embed-bonus-checkbox');
+                if (embedBonusCheckbox && embedBonusCheckbox.checked) {
+                    const bonusType = document.getElementById('embed-bonus-type-select').value;
+                    const bonusVariant = document.getElementById('embed-bonus-variant-select').value;
+                    
+                    embeddedBonus = {
+                        type: bonusType,
+                        variant: bonusVariant
+                    };
+                    
+                    console.log(`Adding embedded bonus: ${bonusType} (${bonusVariant})`);
+                }
+                
+                // Add the entity
+                this.editor.addEntity(
+                    this.editor.ui.selectedEntityType,
+                    this.editor.ui.selectedObjectType,
+                    this.editor.ui.selectedVariant,
+                    lane,
+                    position,
+                    embeddedBonus
+                );
+            }
         }
     }
     

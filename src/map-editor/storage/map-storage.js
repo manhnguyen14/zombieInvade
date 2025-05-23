@@ -17,49 +17,11 @@ export class MapStorage {
     saveMaps(maps) {
         localStorage.setItem(this.localStorageKey, JSON.stringify(maps));
     }
-    
-    // Save a single map to localStorage
-    saveMap(map) {
-        if (!map.id) {
-            map.id = this._generateId();
-        }
-        
-        const maps = this.loadMaps();
-        const existingMapIndex = maps.findIndex(m => m.id === map.id);
-        
-        if (existingMapIndex >= 0) {
-            maps[existingMapIndex] = map;
-        } else {
-            maps.push(map);
-        }
-        
-        this.saveMaps(maps);
-        return map;
-    }
-    
+
     // Save a map to localStorage with a specific key
     saveMapToLocalStorage(map, storageKey) {
         localStorage.setItem(storageKey, JSON.stringify(map));
     }
-    
-    // Delete a map from localStorage
-    deleteMap(mapId) {
-        const maps = this.loadMaps();
-        const filteredMaps = maps.filter(map => map.id !== mapId);
-        this.saveMaps(filteredMaps);
-    }
-    
-    // Get a map by ID
-    getMap(mapId) {
-        const maps = this.loadMaps();
-        return maps.find(map => map.id === mapId) || null;
-    }
-    
-    // Generate a unique ID for a new map
-    _generateId() {
-        return 'map_' + Date.now().toString(36) + Math.random().toString(36).substr(2, 5);
-    }
-
     /**
      * Import a map from a file
      * @returns {Promise<Object>} The imported map
