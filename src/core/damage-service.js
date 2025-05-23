@@ -41,8 +41,6 @@ export class DamageService {
             console.error('[DAMAGE_SYSTEM] Event bus not found');
             return;
         }
-
-        console.log('[DAMAGE_SERVICE] Initialized');
     }
 
     /**
@@ -62,7 +60,6 @@ export class DamageService {
                 continue;
             }
         }
-        console.log('[DAMAGE_SERVICE] Finished update');
     }
 
     /**
@@ -72,30 +69,25 @@ export class DamageService {
      * @returns {boolean} True if damage was applied, false otherwise
      */
     applyDamage(damageAreaEntity, target) {
-        console.log(`[DAMAGE_SERVICE] Attempting to apply damage to entity ${target.id}`);
 
         const damageArea = damageAreaEntity.getComponent('damageArea');
         if (!damageArea) {
-            console.log(`[DAMAGE_SERVICE] Entity ${damageAreaEntity.id} has no damage area component`);
             return false;
         }
 
         // Check if we've already damaged this entity
         if (damageArea.hasDamagedEntity(target)) {
-            console.log(`[DAMAGE_SERVICE] Entity ${target.id} already damaged by this area`);
             return false;
         }
 
         // Check if we've reached the maximum number of affected entities
         if (!damageArea.canDamageMoreEntities()) {
-            console.log(`[DAMAGE_SERVICE] Maximum number of affected entities (${damageArea.affectedEntities}) reached`);
             return false;
         }
 
         // Get health component
         const health = target.getComponent('health');
         if (!health) {
-            console.log(`[DAMAGE_SERVICE] Entity ${target.id} has no health component`);
             return false;
         }
 
@@ -114,7 +106,6 @@ export class DamageService {
      */
     destroyDamageArea(entity) {
         // Remove from active damage areas
-        console.log(`[DAMAGE_SERVICE] Destroying damage area entity ${entity.id}`);
         const index = this.damageAreas.indexOf(entity);
         if (index !== -1) {
             this.damageAreas.splice(index, 1);
@@ -149,7 +140,6 @@ export class DamageService {
         // Publish event for movement system to handle if attack behavior is to stop
         if (damage.attackBehavior === AttackBehavior.STOP && this.eventBus) {
             this.eventBus.publish('entityStoppedForAttack', { entity: enemy });
-            console.log(`[DAMAGE_SERVICE] Published entityStoppedForAttack event for entity ${enemy.id}`);
         }
 
         // Create damage area
@@ -202,13 +192,11 @@ export class DamageService {
      * @param {Entity} damageAreaEntity - The damage area entity
      */
     applyDamageWithPriority(damageAreaEntity) {
-        console.log(`[DAMAGE_SERVICE] Applying damage with priority for damage area ${damageAreaEntity.id}`);
 
         // Get all soldiers in the damage area
         const soldiers = this.getSoldiersInDamageArea(damageAreaEntity);
         
         if (soldiers.length === 0) {
-            console.log(`[DAMAGE_SERVICE] No soldiers found in damage area, skipping damage application`);
             return;
         }
 
@@ -222,12 +210,10 @@ export class DamageService {
             return 0;
         });
 
-        console.log(`[DAMAGE_SERVICE] Sorted soldiers by priority, applying damage in order`);
 
         // Apply damage to soldiers in priority order
         for (const soldier of soldiers) {
             const damageArea = damageAreaEntity.getComponent('damageArea');
-            console.log(`[DAMAGE_SERVICE] Checking if damage area can damage more entities: ${damageArea.canDamageMoreEntities()}`);
 
             if (damageArea.canDamageMoreEntities()) {
                 const success = this.applyDamage(damageAreaEntity, soldier);
@@ -243,7 +229,6 @@ export class DamageService {
      * @returns {Entity[]} Array of soldier entities in the damage area
      */
     getSoldiersInDamageArea(damageAreaEntity) {
-        console.log(`[DAMAGE_SERVICE] Getting soldiers in damage area for entity ${damageAreaEntity.id}`);
 
         // Get damage area bounds
         const transform = damageAreaEntity.getComponent('transform');
@@ -263,11 +248,9 @@ export class DamageService {
             height: render.height
         };
 
-        console.log(`[DAMAGE_SERVICE] Damage area bounds: left=${bounds.left}, top=${bounds.top}, right=${bounds.right}, bottom=${bounds.bottom}`);
 
         // Get all soldiers
         const allEntities = this.entityManager.getEntitiesWithAllComponents(['transform', 'collision', 'health']);
-        console.log(`[DAMAGE_SERVICE] Found ${allEntities.length} entities with transform, collision, and health components`);
 
         const soldiers = allEntities.filter(entity => {
             const entityCollision = entity.getComponent('collision');
@@ -277,7 +260,6 @@ export class DamageService {
             );
         });
 
-        console.log(`[DAMAGE_SERVICE] Found ${soldiers.length} soldiers/players`);
 
         // Filter soldiers that are in the damage area
         const soldiersInArea = soldiers.filter(soldier => {
@@ -289,15 +271,11 @@ export class DamageService {
             }
 
             const soldierBounds = soldierCollision.getHitboxBounds(soldierTransform);
-            console.log(`[DAMAGE_SERVICE] Soldier ${soldier.id} bounds: left=${soldierBounds.left}, top=${soldierBounds.top}, right=${soldierBounds.right}, bottom=${soldierBounds.bottom}`);
 
             const intersects = CollisionComponent.intersects(bounds, soldierBounds);
-            console.log(`[DAMAGE_SERVICE] Soldier ${soldier.id} ${intersects ? 'is' : 'is not'} in damage area`);
 
             return intersects;
         });
-
-        console.log(`[DAMAGE_SERVICE] Found ${soldiersInArea.length} soldiers in damage area`);
 
         return soldiersInArea;
     }
@@ -471,14 +449,12 @@ export class DamageService {
      * @param {Entity} initialEnemy - The enemy that was initially hit
      */
     applyDamageToEnemiesInArea(damageAreaEntity, initialEnemy) {
-        console.log(`[DAMAGE_SERVICE] Applying damage to enemies in area for damage area ${damageAreaEntity.id}`);
 
         // Get damage area bounds
         const transform = damageAreaEntity.getComponent('transform');
         const render = damageAreaEntity.getComponent('render');
 
         if (!render || !transform) {
-            console.log(`[DAMAGE_SERVICE] Damage area has no render or transform component`);
             return;
         }
 
@@ -491,10 +467,8 @@ export class DamageService {
             height: render.height
         };
 
-        console.log(`[DAMAGE_SERVICE] Damage area bounds: left=${bounds.left}, top=${bounds.top}, right=${bounds.right}, bottom=${bounds.bottom}`);
         // Get all entities with health component that could be damaged
         const allEntities = this.entityManager.getEntitiesWithAllComponents(['transform', 'collision', 'health']);
-        console.log(`[DAMAGE_SERVICE] Found ${allEntities.length} entities with transform, collision, and health components`);
 
         // Filter to get only enemies
         const enemies = allEntities.filter(entity => {
@@ -509,7 +483,6 @@ export class DamageService {
             );
         });
 
-        console.log(`[DAMAGE_SERVICE] Found ${enemies.length} enemies`);
         // Filter enemies that are in the damage area
         const enemiesInArea = enemies.filter(enemy => {
             const enemyTransform = enemy.getComponent('transform');
@@ -521,12 +494,9 @@ export class DamageService {
 
             const enemyBounds = enemyCollision.getHitboxBounds(enemyTransform);
             const intersects = CollisionComponent.intersects(bounds, enemyBounds);
-            console.log(`[DAMAGE_SERVICE] Enemy ${enemy.id} ${intersects ? 'is' : 'is not'} in damage area`);
 
             return intersects;
         });
-
-        console.log(`[DAMAGE_SERVICE] Found ${enemiesInArea.length} enemies in damage area`);
 
         // Apply damage to the initial enemy first
         this.applyDamage(damageAreaEntity, initialEnemy);
@@ -535,11 +505,8 @@ export class DamageService {
         for (const enemy of enemiesInArea) {
             const damageArea = damageAreaEntity.getComponent('damageArea');
             if (damageArea.canDamageMoreEntities()) {
-                console.log(`[DAMAGE_SERVICE] Applying damage to enemy ${enemy.id}`);
                 const success = this.applyDamage(damageAreaEntity, enemy);
-                console.log(`[DAMAGE_SERVICE] Damage application ${success ? 'succeeded' : 'failed'}`);
             } else {
-                console.log(`[DAMAGE_SERVICE] Damage area has reached maximum number of affected entities, stopping damage application`);
                 break;
             }
         }

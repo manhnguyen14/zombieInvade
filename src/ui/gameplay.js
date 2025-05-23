@@ -305,8 +305,7 @@ function setupButtonControls() {
             }
         });
     }
-    
-    console.log('[GAMEPLAY] Game control buttons set up');
+
 }
 
 // Add keyboard event listeners
@@ -319,8 +318,7 @@ function setupKeyboardControls() {
 // Separate function for handling keydown events
 function handleKeyDown(e) {
     // Log key presses for debugging
-    console.log('[GAMEPLAY] Key pressed:', e.key, 'Key code:', e.code);
-    
+
     // Don't handle shortcuts if typing in an input field
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
         return;
@@ -333,7 +331,6 @@ function handleKeyDown(e) {
     
     // Space: Toggle pause/resume
     if (e.key === ' ') {
-        console.log('[GAMEPLAY] Space pressed - toggling pause/resume');
         if (game) {
             if (game.isPaused) {
                 game.resume();
@@ -352,7 +349,6 @@ function handleKeyDown(e) {
     
     // Arrow Up: Move lane up
     if (e.key === 'ArrowUp') {
-        console.log('[GAMEPLAY] Arrow Up pressed - moving lane up');
         if (!player) return;
         
         const laneComponent = player.getComponent('lane');
@@ -370,7 +366,6 @@ function handleKeyDown(e) {
     
     // Arrow Down: Move lane down
     if (e.key === 'ArrowDown') {
-        console.log('[GAMEPLAY] Arrow Down pressed - moving lane down');
         if (!player) return;
         
         const laneComponent = player.getComponent('lane');
@@ -391,7 +386,6 @@ function handleKeyDown(e) {
     
     // Arrow Right: Speed up
     if (e.key === 'ArrowRight') {
-        console.log('[GAMEPLAY] Arrow Right pressed - increasing speed');
         const speedController = ServiceLocator.getService('speedController');
         if (speedController) {
             speedController.increasePlayerSpeed();
@@ -401,7 +395,6 @@ function handleKeyDown(e) {
     
     // Arrow Left: Speed down
     if (e.key === 'ArrowLeft') {
-        console.log('[GAMEPLAY] Arrow Left pressed - decreasing speed');
         const speedController = ServiceLocator.getService('speedController');
         if (speedController) {
             speedController.decreasePlayerSpeed();
@@ -411,7 +404,6 @@ function handleKeyDown(e) {
     
     // Z: Throw standard grenade
     if (e.key === 'z' || e.key === 'Z') {
-        console.log('[GAMEPLAY] Z pressed - throwing standard grenade');
         if (!player) return;
         
         const entityManager = ServiceLocator.getService('entityManager');
@@ -420,7 +412,6 @@ function handleKeyDown(e) {
         if (entityManager && playerSoldierService) {
             const grenade = playerSoldierService.throwGrenade(entityManager, player, 'standard');
             if (grenade) {
-                console.log('[PLAYER] Threw standard grenade');
                 updateGrenadeStats();
             }
         }
@@ -428,7 +419,6 @@ function handleKeyDown(e) {
     
     // X: Throw sticky grenade
     if (e.key === 'x' || e.key === 'X') {
-        console.log('[GAMEPLAY] X pressed - throwing sticky grenade');
         if (!player) return;
         
         const entityManager = ServiceLocator.getService('entityManager');
@@ -437,7 +427,6 @@ function handleKeyDown(e) {
         if (entityManager && playerSoldierService) {
             const grenade = playerSoldierService.throwGrenade(entityManager, player, 'sticky');
             if (grenade) {
-                console.log('[PLAYER] Threw sticky grenade');
                 updateGrenadeStats();
             }
         }
@@ -446,8 +435,7 @@ function handleKeyDown(e) {
 
 // Initialize the game when the page loads
 window.addEventListener('load', () => {
-    console.log('[GAMEPLAY] Page loaded, initializing game');
-    
+
     // Check if required DOM elements exist
     if (!canvas) {
         console.error('[GAMEPLAY] Canvas element not found');

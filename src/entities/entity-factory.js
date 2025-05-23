@@ -228,7 +228,6 @@ export class EntityFactory {
                 return EntityFactory.createObstacle(entityManager, objectType, variant, config);
             case 'bonus':
                 // Bonus entities will be implemented later
-                console.log(`Bonus entity: ${objectType} (${variant}) at lane ${lane}, position ${position}`);
                 return null;
             default:
                 console.warn(`Unknown entity type: ${type}`);

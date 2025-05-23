@@ -34,7 +34,6 @@ export const PlayerSoldierService = {
         const middleCount = playerComp.soldiersByPosition.middle.length;
         const topCount = playerComp.soldiersByPosition.top.length;
         const bottomCount = playerComp.soldiersByPosition.bottom.length;
-        console.log(`[PLAYER_SOLDIER_SERVICE] Adding soldier to player ${playerEntity.id}. Middle: ${middleCount}, Top: ${topCount}, Bottom: ${bottomCount}`);
         let targetPosition;
         if (middleCount <= topCount && middleCount <= bottomCount) {
             targetPosition = 'middle';
@@ -45,7 +44,6 @@ export const PlayerSoldierService = {
         }
         playerComp.soldiersByPosition[targetPosition].push(soldier.id);
         soldier.assignedPosition = targetPosition;
-        console.log(`[PLAYER_SOLDIER_SERVICE] Assigned soldier to position ${targetPosition}`);
         // Distribute soldiers across lanes
         this.distributeSoldiersAcrossLanes(playerEntity, entityManager);
         // Update soldier positions
@@ -89,8 +87,7 @@ export const PlayerSoldierService = {
         const playerComp = playerEntity.getComponent('player');
         const laneComp = playerEntity.getComponent('lane');
         const currentLane = laneComp ? laneComp.laneIndex : 4;
-        console.log(`[DISTRIBUTE] Player in lane ${currentLane}`);
-        
+
         // Clear previous lane assignments
         playerComp.soldiersByLane = {};
         

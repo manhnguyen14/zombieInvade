@@ -237,17 +237,14 @@ export class CollisionComponent extends Component {
      * @returns {Object} Hitbox bounds {left, top, right, bottom, width, height}
      */
     getHitboxBounds(transform) {
-        console.log(`[COLLISION_COMPONENT] Getting hitbox bounds for entity ${this.entity.id} with transform: `, transform);
 
         if (!transform) {
             return { left: 0, top: 0, right: 0, bottom: 0, width: 0, height: 0 };
         }
 
-        console.log(`[COLLISION_COMPONENT] Hitbox width: ${this.width}, height: ${this.height}, offset: ${this.offsetX}, ${this.offsetY}`);
         const left = transform.x + this.offsetX - this.width / 2;
         const top = transform.y + this.offsetY - this.height / 2;
 
-        console.log(`[COLLISION_COMPONENT] Hitbox bounds: left=${left}, top=${top}, right=${left + this.width}, bottom=${top + this.height}`);
         return {
             left,
             top,
@@ -314,7 +311,6 @@ export class CollisionComponent extends Component {
      */
     calculateOccupiedLanes(transform, laneHeight) {
         if (!transform || laneHeight <= 0) {
-            console.log(`[COLLISION_COMPONENT] Cannot calculate occupied lanes: invalid transform or lane height`);
             this.occupiedLanes = [];
             return this.occupiedLanes;
         }
@@ -322,25 +318,19 @@ export class CollisionComponent extends Component {
         // First check if entity has a lane component with a valid laneIndex
         const laneComponent = this.entity.getComponent('lane');
         if (laneComponent && typeof laneComponent.laneIndex === 'number') {
-            console.log(`[COLLISION_COMPONENT] Using lane component index: ${laneComponent.laneIndex}`);
             this.occupiedLanes = [laneComponent.laneIndex];
             return this.occupiedLanes;
         }
 
         // Fall back to transform-based calculation if no lane component
         const bounds = this.getHitboxBounds(transform);
-        console.log(`[COLLISION_COMPONENT] Calculating occupied lanes for entity ${this.entity.id} with bounds: left=${bounds.left}, top=${bounds.top}, right=${bounds.right}, bottom=${bounds.bottom}`);
         const topLane = Math.floor(bounds.top / laneHeight);
-        console.log(`[COLLISION_COMPONENT] Top lane: ${topLane}`);
         const bottomLane = Math.floor(bounds.bottom / laneHeight);
-        console.log(`[COLLISION_COMPONENT] Bottom lane: ${bottomLane}`);
-        
+
         // Create array of occupied lanes
         this.occupiedLanes = [];
         for (let i = topLane; i <= bottomLane; i++) {
-            console.log(`[COLLISION_COMPONENT] Adding lane ${i} to occupied lanes`);
             if (i >= 0) {
-                console.log(`[COLLISION_COMPONENT] Pushing lane ${i} to occupied lanes`);
                 this.occupiedLanes.push(i);
             }
         }

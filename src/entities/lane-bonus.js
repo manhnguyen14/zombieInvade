@@ -92,7 +92,5 @@ export function createLaneBonusEntity(entityManager, config = {}) {
     // Notify that the entity is fully initialized with all components
     entityManager.notifyEntityAdded(entity);
 
-    console.log(`[LANE_BONUS] Created lane bonus of type ${bonus.bonusType} (${render.entityVariant}) in lane ${lane.laneIndex} with sprite dimensions ${render.width}x${render.height}`);
-
     return entity;
 }

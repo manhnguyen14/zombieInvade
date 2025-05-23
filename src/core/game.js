@@ -70,8 +70,6 @@ export class Game {
             currentPosition: config.finishLine?.position || 0,
             passed: false
         };
-        console.log('Finish line enabled:', this.finishLine.enabled);
-        console.log('Initial finish line position:', this.finishLine.initialPosition);
 
         // Initialize core systems
         this._initializeSystems();
@@ -392,7 +390,6 @@ export class Game {
         // Update ALL systems explicitly, not just through _update()
         for (const system of this.systems) {
             if (typeof system.update === 'function') {
-                console.log(`Step: Updating system ${system.name || 'unknown'} (priority: ${system.getPriority ? system.getPriority() : 'unknown'})`);
                 system.update(fixedTimeStep);
             }
         }
@@ -561,10 +558,7 @@ export class Game {
         
         // Update the finish line position
         this.finishLine.currentPosition -= deltaTime * effectiveSpeed;
-        
-        if (this.debugMode) {
-            console.log(`Finish line position: ${this.finishLine.currentPosition.toFixed(2)}, speed: ${effectiveSpeed.toFixed(2)}`);
-        }
+
     }
 
     // Update the method to check if player has passed the finish line

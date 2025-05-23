@@ -73,7 +73,6 @@ export class EffectService {
      * @param {Object} entity - The entity to slow
      */
     applySlowEffect(effectArea, entity) {
-        console.log(`[EFFECT_SERVICE] Applying slow effect to entity ${entity.id}`);
 
         // Get effect component
         const effect = effectArea.getComponent('effect');
@@ -91,7 +90,6 @@ export class EffectService {
 
         // Apply slow effect using baseSpeed
         movement.speed = movement.baseSpeed * effect.strength;
-        console.log(`[EFFECT_SERVICE] Slowed entity ${entity.id} from ${movement.baseSpeed} to ${movement.speed}`);
 
         // If entity is part of a collision group, recalculate group speed
         if (movement.collisionGroupId) {
@@ -108,7 +106,6 @@ export class EffectService {
      * @param {Entity} entity - The entity to remove effect from
      */
     removeSlowEffect(effectArea, entity) {
-        console.log(`[EFFECT_SERVICE] Removing slow effect from entity ${entity.id}`);
 
         // Get effect component
         const effect = effectArea.getComponent('effect');
@@ -126,7 +123,6 @@ export class EffectService {
 
         // Restore original speed using baseSpeed
         movement.speed = movement.baseSpeed;
-        console.log(`[EFFECT_SERVICE] Restored original speed for entity ${entity.id}: ${movement.speed}`);
 
         // If entity is part of a collision group, recalculate group speed
         if (movement.collisionGroupId) {
@@ -145,7 +141,6 @@ export class EffectService {
         const effect = effectArea.getComponent('effect');
         if (!effect) return;
 
-        console.log(`[EFFECT_SERVICE] Removing effect from all ${effect.affectedEntities.size} affected entities`);
 
         // Remove effect from all affected entities
         for (const entityId of effect.affectedEntities) {
@@ -164,8 +159,7 @@ export class EffectService {
      * @param {string} groupId - The collision group ID
      */
     recalculateGroupSpeed(groupId) {
-        console.log(`[EFFECT_SERVICE] Recalculating speed for collision group ${groupId}`);
-        
+
         // Get collision group manager
         const collisionGroupManager = ServiceLocator.getService('collisionGroupManager');
         if (!collisionGroupManager) {

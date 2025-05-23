@@ -112,11 +112,7 @@ export class ShootingSystem extends EntitySystem {
         
         // Create bullet
         const bullet = createBullet(this.entityManager, gun, entity, position);
-        
-        if (this.debug) {
-            console.log(`[SHOOTING_SYSTEM] Entity ${entity.id} fired a bullet of type ${gun.bulletType}`);
-        }
-        
+
         // Publish event
         if (this.eventBus) {
             this.eventBus.publish('bulletFired', {

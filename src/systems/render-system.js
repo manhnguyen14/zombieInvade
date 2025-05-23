@@ -247,7 +247,6 @@ export class RenderSystem extends EntitySystem {
         if (!finishLineData) return;
         
         const { position, passed } = finishLineData;
-        console.log("[RenderSystem] Drawing finish line at", position);
 
         // Only draw if visible on screen
         if (position >= 0 && position <= this.renderer.width) {

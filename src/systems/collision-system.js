@@ -16,7 +16,6 @@ export class CollisionSystem extends EntitySystem {
      */
     constructor() {
         // This system requires transform and collision components
-        console.log('[COLLISION_SYSTEM] Creating collision system instance');
         super('collisionSystem', ['transform', 'collision']);
 
         // Set a medium priority
@@ -69,7 +68,6 @@ export class CollisionSystem extends EntitySystem {
      */
     update(deltaTime) {
         // Clear colliding pairs from previous frame
-        console.log('[COLLISION_SYSTEM] Clearing colliding pairs');
         this.collidingPairs.clear();
 
         // Check if we need to recalculate collision groups
@@ -280,7 +278,6 @@ export class CollisionSystem extends EntitySystem {
         if (enemyMovement && obstacleMovement) {
             // Use the collision group manager instance
             if (!this.collisionGroupManager) {
-                console.log('[COLLISION] CollisionGroupManager not initialized');
                 return;
             }
 
@@ -317,7 +314,6 @@ export class CollisionSystem extends EntitySystem {
         if (enemyMovement && hazardMovement) {
             // Use the collision group manager instance
             if (!this.collisionGroupManager) {
-                console.log('[COLLISION] CollisionGroupManager not initialized');
                 return;
             }
 

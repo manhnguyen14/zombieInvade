@@ -80,7 +80,6 @@ export function createDamageArea(entityManager, config = {}) {
 
     entity.addComponent(render);
     const renderComponent = entity.getComponent('render');
-    console.log(`[AREA-CONFIG] entity's render component: `, renderComponent);
 
     // Add damage area component
     const damageArea = new DamageAreaComponent();

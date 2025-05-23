@@ -37,24 +37,42 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mapData) {
             try {
                 const map = JSON.parse(mapData);
-                console.log('Loading map data for debugging:', map.name);
+                console.log('Loading map data for debugging:', map);
                 
                 // Import the EntityAdapter dynamically
                 import('../../src/ui/entity-adapter.js').then(module => {
                     const EntityAdapter = module.EntityAdapter;
                     
-                    // Create entities from map data
-                    EntityAdapter.createEntitiesFromMap(map);
+                    // Set a default playerWorldPosition (0 to load all entities)
+                    const playerWorldPosition = 0;
                     
-                    console.log(`Loaded ${map.objects.length} entities from map "${map.name}"`);
+                    // Create entities from map data with playerWorldPosition
+                    EntityAdapter.createEntitiesFromMap(map, playerWorldPosition);
+                    
+                    console.log(`Attempted to load ${map.objects ? map.objects.length : 0} entities from map "${map.name}"`);
+                    
+                    // Log all entities to verify creation
+                    const entities = globals.entityManager.getAllEntities();
+                    console.log(`Current entity count: ${entities.length}`);
                     
                     // Update the entity list in the UI
                     updateEntityList();
+                    
+                    // Make sure entities are positioned correctly in lanes
+                    if (globals.systems && globals.systems.laneSystem) {
+                        entities.forEach(entity => {
+                            if (entity.hasComponent('lane')) {
+                                globals.systems.laneSystem.processEntity(entity, 0);
+                            }
+                        });
+                    }
                 }).catch(error => {
                     console.error('Error importing EntityAdapter:', error);
+                    console.error('Stack:', error.stack);
                 });
             } catch (error) {
                 console.error('Error parsing map data:', error);
+                console.error('Stack:', error.stack);
             }
         }
 

@@ -45,9 +45,7 @@ export class CollisionGroupManager {
      */
     createGroup(entities) {
         if (!entities || entities.length < 2) {
-            if (this.debug) {
-                console.log('[COLLISION_GROUP_MANAGER] Cannot create group with fewer than 2 entities');
-            }
+
             return null;
         }
         
@@ -66,7 +64,6 @@ export class CollisionGroupManager {
         
         // Calculate and set the group speed
         this.updateGroupSpeed(groupId, entities);
-        console.log(`[COLLISION_GROUP_MANAGER] Created group ${groupId} with ${entities.length} entities`);
         return groupId;
     }
     
@@ -83,9 +80,7 @@ export class CollisionGroupManager {
         
         // Check if the group exists
         if (!this.groups.has(groupId)) {
-            if (this.debug) {
-                console.log(`[COLLISION_GROUP_MANAGER] Group ${groupId} does not exist`);
-            }
+
             return false;
         }
         
@@ -112,11 +107,7 @@ export class CollisionGroupManager {
             // Update the group speed
             this.updateGroupSpeed(groupId, entities);
         }
-        
-        if (this.debug) {
-            console.log(`[COLLISION_GROUP_MANAGER] Added entity ${entity.id} to group ${groupId}`);
-        }
-        
+
         return true;
     }
     
@@ -173,19 +164,13 @@ export class CollisionGroupManager {
             
             // Remove the group
             this.groups.delete(groupId);
-            
-            if (this.debug) {
-                console.log(`[COLLISION_GROUP_MANAGER] Removed group ${groupId} (too few entities)`);
-            }
+
         } else {
             // Update the group speed for the remaining entities
             const entityManager = entity.entityManager;
             const remainingEntities = entityIds.map(id => entityManager.getEntity(id)).filter(e => e);
             this.updateGroupSpeed(groupId, remainingEntities);
-            
-            if (this.debug) {
-                console.log(`[COLLISION_GROUP_MANAGER] Removed entity ${entity.id} from group ${groupId}`);
-            }
+
         }
         
         return true;
@@ -204,9 +189,7 @@ export class CollisionGroupManager {
         
         // Check if both groups exist
         if (!this.groups.has(groupId1) || !this.groups.has(groupId2)) {
-            if (this.debug) {
-                console.log(`[COLLISION_GROUP_MANAGER] Cannot merge groups: one or both groups do not exist`);
-            }
+
             return groupId1;
         }
         
@@ -243,11 +226,7 @@ export class CollisionGroupManager {
         
         // Remove group 2
         this.groups.delete(groupId2);
-        
-        if (this.debug) {
-            console.log(`[COLLISION_GROUP_MANAGER] Merged group ${groupId2} into group ${groupId1}`);
-        }
-        
+
         return groupId1;
     }
     
@@ -273,20 +252,13 @@ export class CollisionGroupManager {
                 
                 totalWeightedSpeed += speed * weight;
                 totalWeight += weight;
-                
-                if (this.debug) {
-                    console.log(`[COLLISION_GROUP_MANAGER] Entity ${entity.id}: speed=${speed}, weight=${weight}`);
-                }
+
             }
         }
         
         // Calculate group speed
         const groupSpeed = totalWeight > 0 ? totalWeightedSpeed / totalWeight : 0;
-        
-        if (this.debug) {
-            console.log(`[COLLISION_GROUP_MANAGER] Group ${groupId} speed: ${groupSpeed} (total weight: ${totalWeight})`);
-        }
-        
+
         // Update each entity's movement component with the group speed
         for (const entity of entities) {
             const movement = entity.getComponent('movement');
@@ -466,11 +438,7 @@ export class CollisionGroupManager {
         
         // Remove the original group
         this.groups.delete(groupId);
-        
-        if (this.debug) {
-            console.log(`[COLLISION_GROUP_MANAGER] Split group ${groupId} into ${newGroupIds.length} new groups`);
-        }
-        
+
         return newGroupIds;
     }
     
