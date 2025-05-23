@@ -230,7 +230,7 @@ export const SpriteConfig = {
         frameCount: 1,
         loop: false,
         width: 40,
-        height: 64,
+        height: 84,
         sourceY: 1054,
         sourceX: 0
       },
@@ -239,7 +239,7 @@ export const SpriteConfig = {
         loop: false,
         width: 56,
         height: 16,
-        sourceY: 1118,
+        sourceY: 1138,
         sourceX: 0
       },
       "barrett_xm109": {
@@ -247,7 +247,7 @@ export const SpriteConfig = {
         loop: false,
         width: 96,
         height: 16,
-        sourceY: 1134,
+        sourceY: 1154,
         sourceX: 0
       }
     },
@@ -256,7 +256,7 @@ export const SpriteConfig = {
       loop: false,
       width: 100,
       height: 100,
-      sourceY: 1150,
+      sourceY: 1170,
       sourceX: 0
     },
     zombie: {
@@ -265,7 +265,7 @@ export const SpriteConfig = {
         loop: false,
         width: 24,
         height: 24,
-        sourceY: 1250,
+        sourceY: 1270,
         sourceX: 0
       },
       armored: {
@@ -273,7 +273,7 @@ export const SpriteConfig = {
         loop: false,
         width: 24,
         height: 24,
-        sourceY: 1250,
+        sourceY: 1270,
         sourceX: 0
       },
       giant: {
@@ -281,7 +281,7 @@ export const SpriteConfig = {
         loop: false,
         width: 80,
         height: 80,
-        sourceY: 1274,
+        sourceY: 1294,
         sourceX: 0
       }
     },
@@ -290,7 +290,7 @@ export const SpriteConfig = {
       loop: false,
       width: 40,
       height: 40,
-      sourceY: 1354,
+      sourceY: 1374,
       sourceX: 0
     }
   }

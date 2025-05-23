@@ -120,7 +120,7 @@
 
 ### damage area, gunType = Benelli M4
 - 1 sprite, no loop
-- 40x64px
+- 40x84px
 - start at: y = 1054
 
 ### damage area, gunType = ak47

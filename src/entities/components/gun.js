@@ -64,7 +64,7 @@ export const GunConfigs = {
         bulletHeight: 10,
         affectedEntities: 3, // Can hit multiple enemies
         areaWidth: 40,  // Large area effect (shotgun spread)
-        areaHeight: 64,
+        areaHeight: 84,
         color: '#ff0000' // Red
     },
     [GunType.AK47]: {
