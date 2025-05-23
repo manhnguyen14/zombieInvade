@@ -50,7 +50,7 @@ export const GunConfigs = {
         bulletSpeed: 500,
         bulletWidth: 8,
         bulletHeight: 4,
-        affectedEntities: 1,
+        affectedEntities: 2,
         areaWidth: 40,  // Medium area effect
         areaHeight: 16,
         color: '#ffa500' // Orange
@@ -62,7 +62,7 @@ export const GunConfigs = {
         bulletSpeed: 350,
         bulletWidth: 10,
         bulletHeight: 10,
-        affectedEntities: 3, // Can hit multiple enemies
+        affectedEntities: 4, // Can hit multiple enemies
         areaWidth: 40,  // Large area effect (shotgun spread)
         areaHeight: 84,
         color: '#ff0000' // Red
@@ -74,7 +74,7 @@ export const GunConfigs = {
         bulletSpeed: 600,
         bulletWidth: 6,
         bulletHeight: 3,
-        affectedEntities: 1,
+        affectedEntities: 2,
         areaWidth: 40,  // Small-medium area effect
         areaHeight: 16,
         color: '#00ff00' // Green
@@ -86,7 +86,7 @@ export const GunConfigs = {
         bulletSpeed: 800,
         bulletWidth: 12,
         bulletHeight: 5,
-        affectedEntities: 4, // Can penetrate and hit multiple enemies
+        affectedEntities: 5, // Can penetrate and hit multiple enemies
         areaWidth: 80,  // Medium-large area effect
         areaHeight: 16,
         color: '#0000ff' // Blue
