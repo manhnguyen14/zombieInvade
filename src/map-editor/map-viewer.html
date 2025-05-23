@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Lane Defense - Map Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #34495e;
+            font-family: Arial, sans-serif;
+            color: #ecf0f1;
+        }
+        
+        #viewerContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+        
+        #viewerCanvas {
+            background-color: #2c3e50;
+            border: 2px solid #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .instructions {
+            background-color: #2c3e50;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .instructions h3 {
+            margin-top: 0;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewerContainer">
+        <h1>Zombie Lane Defense - Map Viewer</h1>
+        
+        <canvas id="viewerCanvas" width="800" height="600"></canvas>
+        
+        <div class="controls">
+            <button id="loadMapBtn">Load Map</button>
+            <button id="goToEditorBtn">Go to Map Editor</button>
+        </div>
+        
+        <div class="instructions">
+            <h3>Instructions:</h3>
+            <p>• Click "Load Map" to load a map created in the Map Editor</p>
+            <p>• Use the

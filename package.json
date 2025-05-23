@@ -1,0 +1,15 @@
+{
+  "name": "zombie-lane-defense",
+  "version": "0.1.0",
+  "description": "A pixel art side-scrolling shooter game with lane-based combat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Open http://localhost:3000/tests/test-runner.html in your browser to run tests\" && npm start"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

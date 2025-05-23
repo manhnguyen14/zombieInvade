@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lane System Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        h1 {
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        
+        canvas {
+            border: 2px solid #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .controls {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            width: 800px;
+        }
+        
+        .controls h2 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        .controls p {
+            margin: 10px 0;
+        }
+        
+        .button-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        .debug-panel {
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 5px;
+            width: 800px;
+            height: 200px;
+            overflow-y: auto;
+        }
+        
+        .debug-panel h2 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        
+        .debug-panel pre {
+            margin: 0;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lane System Test</h1>
+    
+    <canvas id="game-canvas" width="800" height="600"></canvas>
+    
+    <div class="controls">
+        <h2>Controls</h2>
+        <p><strong>Arrow Up/Down:</strong> Move player between lanes</p>
+        <p><strong>Space:</strong> Create a new entity in a random lane</p>
+        
+        <div class="button-container">
+            <button id="pause-button">Pause</button>
+            <button id="resume-button">Resume</button>
+            <button id="toggle-debug-button">Toggle Debug</button>
+        </div>
+    </div>
+    
+    <div class="debug-panel">
+        <h2>Debug Output</h2>
+        <pre id="debug-output"></pre>
+    </div>
+    
+    <script type="module">
+        import { initLaneSystemTest } from './lane-system-test.js';
+        
+        // Initialize the test when the page loads
+        let game;
+        
+        window.addEventListener('load', () => {
+            // Initialize the test
+            game = initLaneSystemTest();
+            
+            // Set up button handlers
+            document.getElementById('pause-button').addEventListener('click', () => {
+                game.pause();
+                console.log('Game paused');
+            });
+            
+            document.getElementById('resume-button').addEventListener('click', () => {
+                game.resume();
+                console.log('Game resumed');
+            });
+            
+            document.getElementById('toggle-debug-button').addEventListener('click', () => {
+                game.debugMode = !game.debugMode;
+                console.log(`Debug mode ${game.debugMode ? 'enabled' : 'disabled'}`);
+            });
+            
+            // Override console.log to also output to debug panel
+            const originalConsoleLog = console.log;
+            console.log = function(...args) {
+                // Call original console.log
+                originalConsoleLog.apply(console, args);
+                
+                // Add to debug panel
+                const debugOutput = document.getElementById('debug-output');
+                const message = args.map(arg => {
+                    if (typeof arg === 'object') {
+                        try {
+                            return JSON.stringify(arg);
+                        } catch (e) {
+                            return arg.toString();
+                        }
+                    }
+                    return arg;
+                }).join(' ');
+                
+                debugOutput.textContent += message + '\n';
+                debugOutput.scrollTop = debugOutput.scrollHeight;
+                
+                // Limit debug output length
+                if (debugOutput.textContent.length > 10000) {
+                    debugOutput.textContent = debugOutput.textContent.substring(
+                        debugOutput.textContent.length - 10000
+                    );
+                }
+            };
+        });
+    </script>
+</body>
+</html>

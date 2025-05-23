@@ -1,0 +1,156 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2c3e50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#home-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+}
+
+.main-button {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 18px;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.main-button:hover {
+    background-color: #c0392b;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.back-button {
+    background-color: #7f8c8d;
+}
+
+.back-button:hover {
+    background-color: #95a5a6;
+}
+
+.screen {
+    display: block;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    background-color: #7f8c8d;
+    border-radius: 4px 4px 0 0;
+}
+
+.tab-button.active {
+    background-color: #3498db;
+}
+
+.tab-content {
+    display: none;
+    border: 1px solid #3498db;
+    padding: 20px;
+    border-radius: 0 0 4px 4px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.map-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.map-item {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #3e648e;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.map-item.selected {
+    background-color: #3498db;
+    color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+}

@@ -1,0 +1,195 @@
+/* Main layout */
+.game-layout {
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #000;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#game-sidebar {
+    width: 380px;
+    height: 600px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Canvas */
+#gameCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* HUD */
+#game-hud {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    z-index: 10;
+}
+
+#mapName {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* Sidebar sections */
+.sidebar-section {
+    background-color: #2c3e50;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.sidebar-section h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #3498db;
+    border-bottom: 1px solid #3498db;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+#playerInfo, #grenadeStats div {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 6px 10px;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+/* Keyboard shortcuts */
+.keyboard-shortcuts p {
+    margin: 4px 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.key {
+    display: inline-block;
+    background-color: #34495e;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    min-width: 20px;
+    text-align: center;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+/* Game controls */
+#game-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#game-controls button {
+    padding: 4px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    font-size: 12px;
+}
+
+#game-controls button:hover {
+    background-color: #c0392b;
+}
+
+#pauseButton {
+    background-color: #e67e22;
+}
+
+#pauseButton:hover {
+    background-color: #d35400;
+}
+
+#resumeButton {
+    background-color: #27ae60;
+}
+
+#resumeButton:hover {
+    background-color: #2ecc71;
+}
+
+/* Game over overlay */
+.game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.game-over-content {
+    background-color: #2c3e50;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+}
+
+.game-over-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #e74c3c;
+}
+
+.game-over-stats {
+    margin-bottom: 20px;
+}
+
+.game-over-stats p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.game-over-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.game-over-buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.game-over-buttons button:hover {
+    background-color: #2980b9;
+}

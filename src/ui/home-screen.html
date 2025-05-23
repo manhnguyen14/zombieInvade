@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Lane Defense</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="home-screen.css">
+</head>
+<body>
+    <div id="home-container">
+        <h1>Zombie Lane Defense</h1>
+        
+        <div id="main-menu">
+            <button id="play-button" class="main-button">Play Game</button>
+            <button id="edit-button">Edit Maps</button>
+            <button id="highscore-button">High Scores</button>
+        </div>
+        
+        <div id="play-screen" class="screen hidden">
+            <h2>Play Game</h2>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" value="Rambo">
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-button active" data-tab="default-maps">Default Maps</button>
+                <button class="tab-button" data-tab="custom-maps">Custom Maps</button>
+            </div>
+            
+            <div id="default-maps" class="tab-content active">
+                <div class="map-list" id="default-map-list">
+                    <!-- Maps will be loaded here -->
+                </div>
+            </div>
+            
+            <div id="custom-maps" class="tab-content">
+                <div class="map-list" id="custom-map-list">
+                    <!-- Maps will be loaded here -->
+                </div>
+            </div>
+            
+            <div class="button-row">
+                <button id="play-selected-map" class="main-button">Play</button>
+                <button id="back-from-play" class="back-button">Back</button>
+            </div>
+        </div>
+        
+        <div id="highscore-screen" class="screen hidden">
+            <h2>High Scores</h2>
+            
+            <table id="highscore-table">
+                <thead>
+                    <tr>
+                        <th>Map</th>
+                        <th>Username</th>
+                        <th>Finish Time (s)</th>
+                        <th>Enemies Killed</th>
+                        <th>Enemies Escaped</th>
+                        <th>Date/Time</th>
+                    </tr>
+                </thead>
+                <tbody id="highscore-body">
+                    <!-- High scores will be loaded here -->
+                </tbody>
+            </table>
+            
+            <button id="back-from-highscore" class="back-button">Back</button>
+        </div>
+    </div>
+    
+    <script type="module" src="home-screen.js"></script>
+</body>
+</html>

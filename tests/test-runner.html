@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Lane Defense - Unit Tests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .test-header {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .test-success {
+            color: #2ecc71;
+        }
+
+        .test-failure {
+            color: #e74c3c;
+        }
+
+        .test-suite {
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .suite-success {
+            color: #2ecc71;
+            border-left: 5px solid #2ecc71;
+        }
+
+        .suite-failure {
+            color: #e74c3c;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .test-list {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        .test-passed {
+            color: #2ecc71;
+            margin: 5px 0;
+        }
+
+        .test-failed {
+            color: #e74c3c;
+            margin: 5px 0;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #test-controls {
+            margin: 20px 0;
+        }
+
+        #test-results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Zombie Lane Defense - Unit Tests</h1>
+
+    <div class="test-header">
+        <p><strong>Note:</strong> These tests must be run through the local development server to avoid CORS issues.</p>
+        <p>To run the server:</p>
+        <ol>
+            <li>Install dependencies: <code>npm install</code></li>
+            <li>Start the server: <code>npm start</code></li>
+            <li>Access this page at: <a href="http://localhost:3000/tests/test-runner.html">http://localhost:3000/tests/test-runner.html</a></li>
+        </ol>
+    </div>
+
+    <div id="test-controls">
+        <button id="run-all-tests">Run All Tests</button>
+        <button id="run-service-locator-tests">Test ServiceLocator</button>
+        <button id="run-game-tests">Test Game</button>
+        <button id="run-renderer-tests">Test Renderer</button>
+        <button id="run-input-handler-tests">Test InputHandler</button>
+        <button id="run-timer-tests">Test Timer</button>
+        <button id="run-event-bus-tests">Test EventBus</button>
+        <button id="run-entity-tests">Test Entity</button>
+        <button id="run-component-tests">Test Component</button>
+        <button id="run-entity-manager-tests">Test EntityManager</button>
+        <button id="run-system-tests">Test System</button>
+        <button id="run-entity-system-tests">Test EntitySystem</button>
+        <button id="run-health-component-tests">Test HealthComponent</button>
+        <button id="run-collision-component-tests">Test CollisionComponent</button>
+        <button id="run-movement-component-tests">Test MovementComponent</button>
+    </div>
+
+    <div id="test-results"></div>
+
+    <!-- Load test utilities -->
+    <script type="module">
+        import { TestRunner, Assert } from './test-utils.js';
+
+        // Import test modules
+        import './core/service-locator.test.js';
+        import './core/game.test.js';
+        import './core/renderer.test.js';
+        import './core/input-handler.test.js';
+        import './core/timer.test.js';
+        import './core/event-bus.test.js';
+        import './core/entity-manager.test.js';
+        import './entities/entity.test.js';
+        import './entities/component.test.js';
+        import './entities/components/health.test.js';
+        import './systems/system.test.js';
+        import './systems/entity-system.test.js';
+
+        // Set up event listeners for buttons
+        document.getElementById('run-all-tests').addEventListener('click', () => {
+            runTests(results => {
+                displayResults(document.getElementById('test-results'), results);
+            });
+        });
+
+        // Individual test suite runners
+        const suiteButtons = [
+            { id: 'run-service-locator-tests', pattern: /ServiceLocator/ },
+            { id: 'run-game-tests', pattern: /Game/ },
+            { id: 'run-renderer-tests', pattern: /Renderer/ },
+            { id: 'run-input-handler-tests', pattern: /InputHandler/ },
+            { id: 'run-timer-tests', pattern: /Timer/ },
+            { id: 'run-event-bus-tests', pattern: /EventBus/ },
+            { id: 'run-entity-tests', pattern: /Entity$/ },
+            { id: 'run-component-tests', pattern: /Component$/ },
+            { id: 'run-entity-manager-tests', pattern: /EntityManager/ },
+            { id: 'run-system-tests', pattern: /System$/ },
+            { id: 'run-entity-system-tests', pattern: /EntitySystem/ },
+            { id: 'run-health-component-tests', pattern: /HealthComponent/ },
+            { id: 'run-collision-component-tests', pattern: /CollisionComponent/ },
+            { id: 'run-movement-component-tests', pattern: /MovementComponent/ }
+        ];
+
+        suiteButtons.forEach(button => {
+            document.getElementById(button.id).addEventListener('click', () => {
+                // Filter suites by name pattern
+                const filteredRunner = new TestRunner();
+                const pattern = button.pattern;
+
+                // Copy matching suites from the global runner
+                testRunner.suites.forEach(suite => {
+                    if (pattern.test(suite.name)) {
+                        filteredRunner.suites.push(suite);
+                    }
+                });
+
+                // Run the filtered tests
+                filteredRunner.runAll(results => {
+                    displayResults(document.getElementById('test-results'), results);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+[
+  {
+    "id": "tutorial",
+    "name": "Tutorial",
+    "length": 3000,
+    "objects": [
+      { "type": "enemy", "objectType": "Normal", "variant": "Crawler", "lane": 1, "position": 800 },
+      { "type": "bonus", "objectType": "Soldier", "variant": "Standard", "lane": 0, "position": 600 }
+    ],
+    "spawnZones": []
+  },
+  {
+    "id": "level1",
+    "name": "Level 1: The Outbreak",
+    "length": 6000,
+    "objects": [
+      { "type": "enemy", "objectType": "Normal", "variant": "Standard", "lane": 2, "position": 1000 },
+      { "type": "enemy", "objectType": "Normal", "variant": "Standard", "lane": 4, "position": 1500 },
+      { "type": "obstacle", "objectType": "Small", "variant": "Barricade", "lane": 3, "position": 1200 },
+      { "type": "bonus", "objectType": "Grenade", "variant": "Standard", "lane": 0, "position": 1800 }
+    ],
+    "spawnZones": [
+      {
+        "type": "enemy",
+        "startPosition": 2000,
+        "endPosition": 5000,
+        "lanes": [1, 2, 3, 4],
+        "spawnFrequency": 5,
+        "spawnCount": 10,
+        "possibleEntities": [
+          { "objectType": "Normal", "variant": "Standard", "weight": 80 },
+          { "objectType": "Normal", "variant": "Crawler", "weight": 20 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "level2",
+    "name": "Level 2: The Horde",
+    "length": 8000,
+    "objects": [
+      { "type": "enemy", "objectType": "Armored", "variant": "Standard", "lane": 3, "position": 1200 },
+      { "type": "enemy", "objectType": "Normal", "variant": "Standard", "lane": 5, "position": 1500 },
+      { "type": "obstacle", "objectType": "Medium", "variant": "Barricade", "lane": 4, "position": 1800 },
+      { "type": "bonus", "objectType": "Soldier", "variant": "Standard", "lane": 0, "position": 2000 }
+    ],
+    "spawnZones": [
+      {
+        "type": "enemy",
+        "startPosition": 3000,
+        "endPosition": 7000,
+        "lanes": [2, 3, 4, 5, 6],
+        "spawnFrequency": 4,
+        "spawnCount": 15,
+        "possibleEntities": [
+          { "objectType": "Normal", "variant": "Standard", "weight": 60 },
+          { "objectType": "Normal", "variant": "Crawler", "weight": 20 },
+          { "objectType": "Armored", "variant": "Standard", "weight": 20 }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "level3",
+    "name": "Level 3: The Siege",
+    "length": 10000,
+    "objects": [
+      { "type": "enemy", "objectType": "Giant", "variant": "Standard", "lane": 4, "position": 1500 },
+      { "type": "enemy", "objectType": "Armored", "variant": "Standard", "lane": 2, "position": 1200 },
+      { "type": "enemy", "objectType": "Armored", "variant": "Standard", "lane": 6, "position": 1200 },
+      { "type": "obstacle", "objectType": "Large", "variant": "Barricade", "lane": 3, "position": 2000 },
+      { "type": "bonus", "objectType": "Grenade", "variant": "Sticky", "lane": 0, "position": 2500 }
+    ],
+    "spawnZones": [
+      {
+        "type": "enemy",
+        "startPosition": 3500,
+        "endPosition": 9000,
+        "lanes": [1, 2, 3, 4, 5, 6, 7],
+        "spawnFrequency": 3,
+        "spawnCount": 25,
+        "possibleEntities": [
+          { "objectType": "Normal", "variant": "Standard", "weight": 50 },
+          { "objectType": "Normal", "variant": "Crawler", "weight": 15 },
+          { "objectType": "Armored", "variant": "Standard", "weight": 25 },
+          { "objectType": "Giant", "variant": "Standard", "weight": 10 }
+        ]
+      }
+    ]
+  }
+]

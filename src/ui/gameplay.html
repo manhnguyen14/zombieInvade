@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zombie Lane Defense - Gameplay</title>
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="gameplay.css">
+</head>
+<body>
+    <div class="game-layout">
+        <div id="game-container">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div id="game-hud">
+                <div id="mapName">Map: Loading...</div>
+            </div>
+        </div>
+        
+        <div id="game-sidebar">
+            <div class="sidebar-section">
+                <h3>Game Stats</h3>
+                <div id="playerInfo">Lane: 0 | Speed: 1.0x</div>
+                <div id="grenadeStats">
+                    <div id="standardGrenades">Standard Grenades: 0</div>
+                    <div id="stickyGrenades">Sticky Grenades: 0</div>
+                    <div id="killCount">Enemies Killed: 0</div>
+                    <div id="escapeCount">Enemies Escaped: 0</div>
+                    <div id="timePassed">Time: 0:00</div>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Keyboard Shortcuts</h3>
+                <div class="keyboard-shortcuts">
+                    <p><span class="key">Space</span> Pause/Resume Game</p>
+                    <p><span class="key">↑</span> Move Lane Up</p>
+                    <p><span class="key">↓</span> Move Lane Down</p>
+                    <p><span class="key">→</span> Speed Up</p>
+                    <p><span class="key">←</span> Speed Down</p>
+                    <p><span class="key">Z</span> Throw Standard Grenade</p>
+                    <p><span class="key">X</span> Throw Sticky Grenade</p>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <div id="game-controls">
+                    <button id="pauseButton">Pause</button>
+                    <button id="resumeButton">Resume</button>
+                    <button id="restartButton">Restart</button>
+                    <button id="exitButton">Exit to Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="gameplay.js"></script>
+</body>
+</html>
