@@ -4,6 +4,7 @@
  * Controls the global game speed and provides methods to adjust it.
  * This affects how fast objects move from right to left in the game.
  */
+import { ServiceLocator } from './service-locator.js';
 
 export class GameSpeedController {
     /**
@@ -50,9 +51,14 @@ export class GameSpeedController {
      * @returns {number} The updated player speed modifier
      */
     increasePlayerSpeed() {
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            audioManager.playSound('speedUpDown');
+        }
         return this.setPlayerSpeedModifier(
             this.playerSpeedModifier + this.speedModifierStep
         );
+
     }
 
     /**
@@ -60,6 +66,10 @@ export class GameSpeedController {
      * @returns {number} The updated player speed modifier
      */
     decreasePlayerSpeed() {
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            audioManager.playSound('speedUpDown');
+        }
         return this.setPlayerSpeedModifier(
             this.playerSpeedModifier - this.speedModifierStep
         );

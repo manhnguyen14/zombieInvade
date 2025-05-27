@@ -4,6 +4,7 @@ import { EntityFactory } from '../entities/entity-factory.js';
 import { EntityAdapter } from './entity-adapter.js';
 import { PlayerAdapter } from './player-adapter.js';
 import { MapStorage } from '../map-editor/storage/map-storage.js';
+// import { AudioManager } from '../core/audio-manager.js';
 
 // Initialize managers
 const mapStorage = new MapStorage();
@@ -18,6 +19,7 @@ const pauseButton = document.getElementById('pauseButton');
 const resumeButton = document.getElementById('resumeButton');
 const restartButton = document.getElementById('restartButton');
 const exitButton = document.getElementById('exitButton');
+const bonusHistoryElement = document.getElementById('bonusHistory');
 
 // Game state
 let game;
@@ -81,6 +83,7 @@ function initGame() {
         eventBus.subscribe('gameFinished', handleGameFinished);
         eventBus.subscribe('enemyKilled', handleEnemyKilled);
         eventBus.subscribe('enemyEscaped', handleEnemyEscaped);
+        eventBus.subscribe('bonusCollectedAnnouncement', handleBonusCollected);
     }
 
     // Create player and load initial entities
@@ -215,7 +218,14 @@ function handleGameFinished(eventData) {
     highScores.push(highScore);
     localStorage.setItem('zombieLaneDefense_highScores', JSON.stringify(highScores));
     
+    const audioManager = ServiceLocator.getService('audioManager');
+    
     if (result === 'victory') {
+        // Play finish game sound
+        if (audioManager) {
+            audioManager.playSound('finishGame');
+        }
+        
         // Show victory message
         setTimeout(() => {
             alert('Level completed! You reached the finish line.');
@@ -240,6 +250,69 @@ function handleEnemyKilled() {
 function handleEnemyEscaped() {
     enemyEscapeCount++;
     updateGrenadeStats();
+    
+    // Play enemy escaped sound
+    const audioManager = ServiceLocator.getService('audioManager');
+    if (audioManager) {
+        audioManager.playSound('enemyEscaped');
+    }
+}
+
+// Handle bonus collected event
+function handleBonusCollected(event) {
+    console.log('[gameplay] Bonus collected', event);
+    const { bonusType, bonusVariant } = event;
+
+    // Add bonus to history display
+    addBonusToHistory(bonusType, bonusVariant);
+}
+
+// Add a bonus to the history display
+function addBonusToHistory(bonusType, bonusVariant) {
+    // Create bonus item element
+    const bonusItem = document.createElement('div');
+    bonusItem.className = 'bonus-item';
+    
+    // Create bonus text
+    const bonusText = document.createElement('span');
+    bonusText.textContent = `${formatBonusName(bonusType, bonusVariant)}`;
+    bonusItem.appendChild(bonusText);
+
+    // Add to history (at the top)
+    if (bonusHistoryElement.firstChild) {
+        bonusHistoryElement.insertBefore(bonusItem, bonusHistoryElement.firstChild);
+    } else {
+        bonusHistoryElement.appendChild(bonusItem);
+    }
+    
+    // Limit history to 20 items
+    while (bonusHistoryElement.children.length > 20) {
+        bonusHistoryElement.removeChild(bonusHistoryElement.lastChild);
+    }
+}
+
+// Format bonus name for display
+function formatBonusName(bonusType, bonusVariant) {
+    const typeMap = {
+        'gun': 'Gun',
+        'grenade': 'Grenade',
+        'soldier': 'Soldier'
+    };
+    
+    const variantMap = {
+        'standard': 'Standard',
+        'sticky': 'Sticky',
+        'glock_17': 'Glock 17',
+        'mp5': 'MP5',
+        'ak47': 'AK-47',
+        'shotgun': 'Shotgun',
+        'm16': 'M16'
+    };
+    
+    const type = typeMap[bonusType] || bonusType;
+    const variant = variantMap[bonusVariant] || bonusVariant;
+    
+    return `${type}: ${variant}`;
 }
 
 // Clean up event listeners when leaving the page
@@ -249,6 +322,8 @@ window.addEventListener('beforeunload', () => {
         eventBus.unsubscribe('gameFinished', handleGameFinished);
         eventBus.unsubscribe('enemyKilled', handleEnemyKilled);
         eventBus.unsubscribe('enemyEscaped', handleEnemyEscaped);
+        eventBus.unsubscribe('bonusCollected', handleBonusCollected);
+        eventBus.unsubscribe('embeddedBonusCollected', handleBonusCollected);
     }
 });
 
@@ -346,7 +421,7 @@ function handleKeyDown(e) {
     if (game && game.isPaused) {
         return;
     }
-    
+
     // Arrow Up: Move lane up
     if (e.key === 'ArrowUp') {
         if (!player) return;
@@ -380,6 +455,7 @@ function handleKeyDown(e) {
             if (playerSoldierService) {
                 playerSoldierService.moveToLane(player, newLaneIndex);
                 updatePlayerInfo();
+
             }
         }
     }

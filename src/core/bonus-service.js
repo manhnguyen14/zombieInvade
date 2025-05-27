@@ -102,6 +102,27 @@ export class BonusService {
                 console.warn('[BONUS_SERVICE] Unknown bonus type:', bonusData.bonusType);
                 break;
         }
+        const bonusType = bonus.bonusType;
+        const bonusVariant = bonus.bonusVariant;
+        const eventBus = ServiceLocator.getService('eventBus');
+        if (eventBus) {
+            eventBus.publish('bonusCollectedAnnouncement', {
+                bonusType,
+                bonusVariant
+            });
+        }
+        
+        // Play appropriate bonus collected sound
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            if (bonusType === 'grenade') {
+                audioManager.playSound('bonusGrenadeCollected');
+            } else if (bonusType === 'gun') {
+                audioManager.playSound('bonusGunCollected');
+            } else if (bonusType === 'soldier') {
+                audioManager.playSound('bonusSoldierCollected');
+            }
+        }
     }
     
     /**

@@ -31,6 +31,7 @@ import { CollisionSystem } from '../systems/collision-system.js';
 import { DamageSystem } from '../systems/damage-system.js';
 import { ShootingSystem } from '../systems/shooting-system.js';
 import { AssetLoader } from './asset-loader.js';
+import { AudioManager } from './audio-manager.js';
 
 export class Game {
     /**
@@ -176,6 +177,16 @@ export class Game {
                 assetLoader.loadAssets();
         }
 
+        // Check if audio manager already exists
+        let audioManager;
+        try {
+            audioManager = ServiceLocator.getService('audioManager');
+        } catch (e) {
+            // Create audio manager if it doesn't exist
+            audioManager = new AudioManager();
+            ServiceLocator.registerService('audioManager', audioManager);
+            audioManager.initialize();
+        }
 
             // Create and add core game systems if they don't exist
         

@@ -147,6 +147,12 @@ export class DamageService {
         if (damageAreaEntity) {
             this.damageAreas.push(damageAreaEntity);
         }
+
+        // Play enemy soldier collision sound
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            audioManager.playSound('enemySoldierCollision');
+        }
     }
 
     /**
@@ -343,6 +349,12 @@ export class DamageService {
                 radius: projectileComponent.areaWidth / 2
             });
         }
+
+        // Play grenade damage area created sound
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            audioManager.playSound('grenadeDamageAreaCreated');
+        }
     }
 
     /**
@@ -397,6 +409,12 @@ export class DamageService {
         // Publish events for rendering
         if (this.eventBus) {
             this.eventBus.publish('stickyAreaCreated', { stickyArea: stickyAreaEntity });
+        }
+
+        // Play grenade damage area created sound
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            audioManager.playSound('grenadeDamageAreaCreated');
         }
     }
 

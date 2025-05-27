@@ -239,8 +239,14 @@ export const PlayerSoldierService = {
             
             // Get event bus
             const eventBus = ServiceLocator.getService('eventBus');
-
             eventBus.publish('entityPositionChanged', { entity: playerEntity });
+            
+            // Play move sound
+            const audioManager = ServiceLocator.getService('audioManager');
+            if (audioManager) {
+                audioManager.playSound('moveUpDown');
+            }
+            
             // Update soldier distribution and positions
             const entityManager = ServiceLocator.getService('entityManager');
             this.distributeSoldiersAcrossLanes(playerEntity, entityManager);
@@ -326,6 +332,12 @@ export const PlayerSoldierService = {
         grenade.addComponent(projectile);
         grenade.addTag('grenade');
         grenade.addTag(grenadeType === GrenadeType.STICKY ? 'stickyGrenade' : 'standardGrenade');
+
+        // Play throw grenade sound
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            audioManager.playSound('throwGrenade');
+        }
 
         // Notify that the entity is fully initialized with all components
         entityManager.notifyEntityAdded(grenade);

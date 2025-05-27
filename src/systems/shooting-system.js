@@ -113,6 +113,33 @@ export class ShootingSystem extends EntitySystem {
         // Create bullet
         const bullet = createBullet(this.entityManager, gun, entity, position);
 
+        // Play gun sound based on gun type
+        const audioManager = ServiceLocator.getService('audioManager');
+        if (audioManager) {
+            // Play appropriate gun sound based on gun type
+            switch (gun.gunType) {
+                case 'ak47':
+                    audioManager.playSound('bulletAk47');
+                    break;
+                case 'benelliM4':
+                    audioManager.playSound('bulletBenelliM4');
+                    break;
+                case 'desertEagle':
+                    audioManager.playSound('bulletDesertEagle');
+                    break;
+                case 'glock17':
+                    audioManager.playSound('bulletGlock17');
+                    break;
+                case 'barrettXm109':
+                    audioManager.playSound('bulletBarrettXm109');
+                    break;
+                default:
+                    // Default gun sound
+                    audioManager.playSound('bulletGlock17');
+                    break;
+            }
+        }
+
         // Publish event
         if (this.eventBus) {
             this.eventBus.publish('bulletFired', {

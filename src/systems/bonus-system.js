@@ -99,10 +99,6 @@ export class BonusSystem extends EntitySystem {
         const { player, bonus } = event;
         this.bonusService.handleBonusCollected(player, bonus);
         this.entityManager.removeEntity(bonus);
-
-        if (this.debug) {
-            console.log('[BONUS_SYSTEM] Bonus collected and removed:', bonus.id);
-        }
     }
 
     /**
