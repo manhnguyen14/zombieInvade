@@ -102,6 +102,12 @@ function initGame() {
 
     // Update player info display
     updatePlayerInfo();
+    
+    // Play background music
+    const audioManager = ServiceLocator.getService('audioManager');
+    if (audioManager) {
+        audioManager.playBackgroundMusic('backgroundMusicAdventure', 0.3, true);
+    }
 }
 
 // Load entities from the map data
@@ -221,8 +227,10 @@ function handleGameFinished(eventData) {
     const audioManager = ServiceLocator.getService('audioManager');
     
     if (result === 'victory') {
-        // Play finish game sound
+        // Stop background music
         if (audioManager) {
+            audioManager.stopBackgroundMusic();
+            // Play finish game sound
             audioManager.playSound('finishGame');
         }
         
@@ -232,6 +240,11 @@ function handleGameFinished(eventData) {
             window.location.href = 'home-screen.html';
         }, 500);
     } else if (result === 'defeat') {
+        // Stop background music
+        if (audioManager) {
+            audioManager.stopBackgroundMusic();
+        }
+        
         // Show defeat message
         setTimeout(() => {
             alert(`Game over! ${reason}`);
@@ -325,6 +338,12 @@ window.addEventListener('beforeunload', () => {
         eventBus.unsubscribe('bonusCollected', handleBonusCollected);
         eventBus.unsubscribe('embeddedBonusCollected', handleBonusCollected);
     }
+    
+    // Stop background music when leaving the page
+    const audioManager = ServiceLocator.getService('audioManager');
+    if (audioManager) {
+        audioManager.stopBackgroundMusic();
+    }
 });
 
 // Set up periodic entity spawning
@@ -353,6 +372,7 @@ function setupButtonControls() {
         pauseButton.addEventListener('click', () => {
             if (game) {
                 game.pause();
+                handleGamePauseResume(true);
             }
         });
     }
@@ -361,6 +381,7 @@ function setupButtonControls() {
         resumeButton.addEventListener('click', () => {
             if (game) {
                 game.resume();
+                handleGamePauseResume(false);
             }
         });
     }
@@ -376,11 +397,15 @@ function setupButtonControls() {
     if (exitButton) {
         exitButton.addEventListener('click', () => {
             if (confirm('Are you sure you want to exit to the menu? Your progress will be lost.')) {
+                // Stop background music before exiting
+                const audioManager = ServiceLocator.getService('audioManager');
+                if (audioManager) {
+                    audioManager.stopBackgroundMusic();
+                }
                 window.location.href = 'home-screen.html';
             }
         });
     }
-
 }
 
 // Add keyboard event listeners
@@ -409,9 +434,11 @@ function handleKeyDown(e) {
         if (game) {
             if (game.isPaused) {
                 game.resume();
+                handleGamePauseResume(false);
                 console.log('[GAMEPLAY] Game resumed');
             } else {
                 game.pause();
+                handleGamePauseResume(true);
                 console.log('[GAMEPLAY] Game paused');
             }
         }
@@ -506,6 +533,20 @@ function handleKeyDown(e) {
                 updateGrenadeStats();
             }
         }
+    }
+}
+
+// Add a function to handle game paused/resumed events
+function handleGamePauseResume(isPaused) {
+    const audioManager = ServiceLocator.getService('audioManager');
+    if (!audioManager || !audioManager.music) return;
+    
+    if (isPaused) {
+        // Don't stop the music, just pause it
+        audioManager.music.pause();
+    } else {
+        // Resume the music
+        audioManager.music.play().catch(err => console.error('Error resuming background music:', err));
     }
 }
 

@@ -84,6 +84,41 @@ export class AudioManager {
         }
     }
 
+    playBackgroundMusic(musicId, volume = 0.3, loop = true) {
+        // Try to load sounds if we don't have any yet
+        if (Object.keys(this.sounds).length === 0) {
+            this.loadSoundsFromAssetLoader();
+        }
+
+        // Stop any currently playing music
+        this.stopBackgroundMusic();
+        
+        if (this.isMuted || !this.sounds[musicId]) {
+            console.log(`[AUDIO_MANAGER] Cannot play background music: ${musicId}`);
+            return null;
+        }
+        
+        // Create a new audio element for the music
+        this.music = this.sounds[musicId].cloneNode();
+        this.music.volume = this.volume * volume;
+        this.music.loop = loop;
+        
+        // Play the music
+        this.music.play().catch(err => console.error(`Error playing background music ${musicId}:`, err));
+        console.log(`[AUDIO_MANAGER] Playing background music: ${musicId}`);
+        
+        return this.music;
+    }
+
+    stopBackgroundMusic() {
+        if (this.music) {
+            this.music.pause();
+            this.music.currentTime = 0;
+            this.music = null;
+            console.log('[AUDIO_MANAGER] Stopped background music');
+        }
+    }
+
     setVolume(volume) {
         this.volume = Math.max(0, Math.min(1, volume));
         
@@ -92,23 +127,28 @@ export class AudioManager {
             sound.audio.volume = this.volume;
         });
         
+        // Update background music volume
         if (this.music) {
-            this.music.volume = this.volume * 0.3;
+            this.music.volume = this.volume * 0.3; // Background music at 30% of master volume
         }
+        
+        console.log(`[AUDIO_MANAGER] Volume set to ${this.volume}`);
     }
 
     toggleMute() {
         this.isMuted = !this.isMuted;
         
-        // Update mute state for all active sounds
+        // Update all active sounds
         this.activeSounds.forEach(sound => {
             sound.audio.muted = this.isMuted;
         });
         
+        // Update background music
         if (this.music) {
             this.music.muted = this.isMuted;
         }
         
+        console.log(`[AUDIO_MANAGER] Sound ${this.isMuted ? 'muted' : 'unmuted'}`);
         return this.isMuted;
     }
 }

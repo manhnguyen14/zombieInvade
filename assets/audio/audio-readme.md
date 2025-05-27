@@ -17,3 +17,4 @@
 - enemyEscaped.wav: sound effect when enemy escaped
 - obstacleCollision.wav: sound effect when obstacle collide with soldier
 - enemySoldierCollision.wav: sound effect when enemy collide with soldier
+- backgroundMusicAdventure.mp3: background music when play game

@@ -63,7 +63,8 @@ export class AssetLoader {
                 'throwGrenade': `${assetsBasePath}audio/throwGrenade.wav`,
                 'enemyEscaped': `${assetsBasePath}audio/enemyEscaped.wav`,
                 'obstacleCollision': `${assetsBasePath}audio/obstacleCollision.wav`,
-                'enemySoldierCollision': `${assetsBasePath}audio/enemySoldierCollision.wav`
+                'enemySoldierCollision': `${assetsBasePath}audio/enemySoldierCollision.wav`,
+                'backgroundMusicAdventure': `${assetsBasePath}audio/backgroundMusicAdventure.mp3`
             };
             
             // Define JSON files to load
